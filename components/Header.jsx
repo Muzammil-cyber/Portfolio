@@ -6,15 +6,15 @@ export default function Header() {
     const links = [
         {
             name: 'Home',
-            link: '/home'
+            link: '#Home'
         },
         {
             name: 'Portfolio',
-            link: '/portfolio'
+            link: '#Portfolio'
         },
         {
             name: 'About',
-            link: '/about'
+            link: '#About'
         },
     ]
     function handleClick() {

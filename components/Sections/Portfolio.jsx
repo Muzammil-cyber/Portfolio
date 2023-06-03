@@ -68,7 +68,7 @@ export default function Portfolio() {
 
     return (
         <>
-            <div className='flex-auto py-4'>
+            <div className='flex-auto py-4' id="Portfolio">
                 <div className='flex flex-col items-center justify-center leading-3'>
                     <h1 className='text-4xl font-bold text-slate-800'>Portfolio</h1>
                     <p className='text-xl font-normal text-slate-600'>Here are some of my works</p>
