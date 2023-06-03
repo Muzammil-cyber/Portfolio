@@ -36,7 +36,7 @@ function About() {
     return (<div className="flex-auto py-4 color-content flex flex-row flex-wrap gap-[6%] max-sm:flex-col  max-sm:gap-2 " id="About">
         <div className="sm:w-[47%]">
             <h1 className="text-2xl font-semibold  text-white">About Us</h1>
-            <p className=" text-gray-400 mt-4">Technology enthusiast and web developer. Passionate about coding and creating magical digital experiences. Let's create something awesome together!</p>
+            <p className=" text-gray-400 mt-4">Technology enthusiast and web developer. Passionate about coding and creating magical digital experiences. Let&apos;s create something awesome together!</p>
             <p className=" text-gray-400 mt-4">Web Developer and Coder. Passionate about creating beautiful and functional digital experiences with HTML/CSS, JavaScript, Node.js, Python, Bootstrap and jQuery frameworks. Making the web come alive one pixel at a time!</p>
 
         </div>
