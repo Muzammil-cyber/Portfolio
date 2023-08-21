@@ -29,11 +29,10 @@ There are no known bugs
 
 ## Support and contact details
 If you have any questions or contributions, please reach me at
-* Email: ejeyd@example.com
-* Phone: 0700 000 000
+* Email: muzammilloya0@gmail.com 
+* Phone: #### #######
 ### License
 [MIT LICENSE](LICENSE)
-Copyright (c) 2021 Collins Kiprotich
 
 * Create a new branch
 ```
@@ -54,5 +53,5 @@ $ git push origin <branch-name>
 ```
 * Create a pull request
 ## Live Site
-You can view the live application by following this [link]()
+You can view the live application by following this [link](https://muzammilloya-portfolio.vercel.app/)
 
