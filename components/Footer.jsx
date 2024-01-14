@@ -30,18 +30,25 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="bg-gray-800 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center flex-1 ">
-            <div className="flex items-center text-center sm:justify-between px-4 py-3 sm:p-0">
-                <div className="max-sm:mx-auto">
-                    <p className="text-white ">&copy; 2023 - Muzammil Loya</p>
-                </div>
-            </div>
-            <nav className="px-2 pt-2 pb-4 sm:flex sm:p-0 max-sm:flex-1 max-sm:text-center">
-                {links.map((link, index) => (
-                    <a key={index} href={link.link} className=" px-2 py-1 text-white font-semibold rounded hover:bg-gray-700">{link.icon}</a>
-                ))}
-            </nav>
-        </footer>
-
-    )
+      <footer className="bg-slate-100 dark:bg-slate-800 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center flex-1 ">
+        <div className="flex items-center text-center sm:justify-between px-4 py-3 sm:p-0">
+          <div className="max-sm:mx-auto">
+            <p className="text-gray-500 dark:text-white">
+              &copy; 2023 - Muzammil Loya
+            </p>
+          </div>
+        </div>
+        <nav className="px-2 pt-2 pb-4 sm:flex sm:p-0 max-sm:flex-1 max-sm:text-center">
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.link}
+              className=" px-2 py-1 text-gray-500 dark:text-white font-semibold rounded hover:text-indigo-500 dark:hover:text-indigo-500"
+            >
+              {link.icon}
+            </a>
+          ))}
+        </nav>
+      </footer>
+    );
 }

@@ -1,7 +1,8 @@
-import Header from '@/components/Header'
-import './globals.css'
-import Footer from '@/components/Footer'
+import Header from "@/components/Header";
+import "./globals.css";
+import Footer from "@/components/Footer";
 import GTag from "./gtag";
+import DarkMode from "@/context/DarkMode";
 
 export const metadata = {
   title: "Portfolio - Muzammil",
@@ -27,13 +28,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-screen">
+    <html lang="en" className=" h-screen">
       <GTag />
-      <body className="flex-col h-screen ">
+      {/* <body className={`flex-col h-screen`}> */}
+      <DarkMode>
         <Header />
         {children}
         <Footer />
-      </body>
+      </DarkMode>
+      {/* </body> */}
     </html>
   );
 }
