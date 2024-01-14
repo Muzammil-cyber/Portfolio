@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
 import Link from "next/link";
-import { LuArrowUpRight, LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
 
 export default function Footer() {
   const links = [
@@ -36,7 +36,7 @@ export default function Footer() {
             {process.env.NEXT_PUBLIC_EMAIL}
           </Link>
         </div>
-        <nav className="px-2 pt-2 pb-4 flex sm:flex-row  sm:p-0 w-1/2 justify-end items-end">
+        <nav className="px-2 pt-2 pb-4 flex flex-col sm:flex-row  sm:p-0 w-1/2 justify-center sm:justify-end items-end">
           {links.map((link, index) => (
             <Link
               key={index}

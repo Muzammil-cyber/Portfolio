@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
+import Header from "@/components/layout/Header";
 import "./globals.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/layout/Footer";
 import GTag from "./gtag";
 import DarkMode from "@/context/DarkMode";
 
@@ -21,6 +21,8 @@ export const metadata = {
     "Tailwind CSS",
     "Web3",
     "responsive and user-friendly web app",
+    "blog",
+    "blogger",
   ],
   verification: { google: "zlT0pnlw_0XvL7gPOhY1rwmoUUDMQOKcbqyhVRNcEBc" },
   category: "technology",
