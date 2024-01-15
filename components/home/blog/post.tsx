@@ -51,17 +51,15 @@ export default function Post({
     }
   }, [date]);
 
-  const [dateState, setDate] = useState<string>(dateCreated);
-  useEffect(() => {
-    setTimeout(() => setDate(dateCreated), 60000);
-  }, [dateCreated]);
-
   return (
     <>
       <motion.div
         layoutId={id}
         onClick={() => setId(id)}
         className="max-w-lg bg-slate-200 dark:bg-slate-800 rounded-md p-4 cursor-pointer"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.8 }}
       >
         <motion.h1 className="text-3xl font-extrabold dark:text-white">
           {title}
@@ -74,7 +72,7 @@ export default function Post({
             <motion.span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">
               {topic}
             </motion.span>{" "}
-            • {dateState}
+            • {dateCreated()}
           </motion.p>
           <motion.button
             onClick={() => setId(id)}
@@ -87,7 +85,7 @@ export default function Post({
       </motion.div>
       <AnimatePresence>
         {selectedId == id && (
-          <motion.div className="fixed top-0 bottom-0 w-screen h-screen flex items-center justify-center p-4 cursor-not-allowed">
+          <motion.div className="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center p-4 cursor-not-allowed">
             <motion.div
               layoutId={selectedId}
               className="max-w-xl w-full bg-slate-200 dark:bg-slate-800 rounded-md p-4 cursor-default"
@@ -102,7 +100,7 @@ export default function Post({
                 <motion.span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">
                   {topic}
                 </motion.span>{" "}
-                • {dateState}
+                • {dateCreated()}
               </motion.p>
               <motion.button
                 onClick={() => setId(null)}

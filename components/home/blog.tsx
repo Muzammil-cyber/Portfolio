@@ -44,8 +44,8 @@ export default function Blog() {
   );
 
   function changeFilter(topic: string) {
-    // if click again undo filter
-    if (topic === filterItem[0].topic) {
+    // if click again undo filter (Check all)
+    if (topic === filterItem[0].topic && uniqueTopics.length == 1) {
       setfilter(items);
       return;
     }
@@ -74,7 +74,7 @@ export default function Blog() {
           ))}
         </div>
       </main>
-      <aside className="w-[30%] max-sm:hidden">
+      <aside className="w-[30%] max-sm:hidden sticky top-2 h-fit">
         <h4 className="text-2xl font-bold dark:text-white">Categories</h4>
         <ul className="flex flex-wrap gap-2 mt-4">
           {uniqueTopics.map((topic, index) => (
