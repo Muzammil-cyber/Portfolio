@@ -27,23 +27,23 @@ export default function Header() {
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
           <Image
-            className="h-8 w-auto max-sm:hidden hidden dark:inline"
+            className="h-8 w-auto max-sm:hidden hidden sm:dark:inline"
             src="/logo.svg"
-            alt="Workflow"
+            alt="Muzammil Loya's Portfolio logo"
             width={100}
             height={100}
           />
           <Image
             className="h-8 w-auto dark:hidden max-sm:hidden"
             src="/logo-dark.svg"
-            alt="Workflow"
+            alt="Muzammil Loya's Portfolio logo"
             width={100}
             height={100}
           />
           <Image
             className="h-8 w-auto sm:hidden min-w-[2rem]"
             src="/logo-short.png"
-            alt="Workflow"
+            alt="Muzammil Loya's Portfolio logo"
             width={50}
             height={50}
           />
