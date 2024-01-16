@@ -30,7 +30,7 @@ export default function Footer() {
           </p>
           <Link
             href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
-            className="text-indigo-700 hover:text-indigo-800 dark:text-indigo-600 dark:hover:text-indigo-700 text-sm font-sans font-semibold hover:cursor-pointer"
+            className="link"
           >
             <LuMail className="inline text-lg mr-1" />
             {process.env.NEXT_PUBLIC_EMAIL}

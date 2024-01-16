@@ -38,7 +38,7 @@ export default function HeroHome() {
           height={250}
           className="rounded-full w-64 h-auto absolute z-30"
         />{" "}
-        <div className="w-64 h-80 rounded-full bg-gradient-to-b from-indigo-500 to-indigo-700  absolute z-0"></div>
+        <div className="w-64 h-80 rounded-full image-back absolute z-0"></div>
       </div>
     </section>
   );

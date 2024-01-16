@@ -18,14 +18,11 @@ let DarkContext: Context<{
 const DarkMode = ({ children }) => {
   const [isDark, setDark] = useState<boolean>(false);
 
-  // DarkContext = createContext<{
-  //   isDark: boolean;
-  //   setDark: Dispatch<SetStateAction<boolean>>;
-  // }>({ isDark, setDark }); // Pass the initial value to createContext
+
 
   return (
     <DarkContext.Provider value={{ isDark, setDark }}>
-      <body className={`${isDark ? "dark" : ""} flex-col h-screen`}>
+      <body className={`${isDark ? "dark" : ""} flex-col h-screen `}>
         {children}
       </body>
     </DarkContext.Provider>

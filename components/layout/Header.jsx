@@ -6,15 +6,15 @@ export default function Header() {
   const links = [
     {
       name: "Home",
-      link: "#Home",
+      link: "/",
     },
     {
       name: "Portfolio",
-      link: "#Portfolio",
+      link: "/Portfolio",
     },
     {
       name: "About",
-      link: "#About",
+      link: "/about",
     },
   ];
   function handleClick() {
@@ -49,7 +49,7 @@ export default function Header() {
           />
         </div>
       </div>
-      <nav className="flex p-0">
+      <nav className="flex p-0 mr-16">
         {links.map((key, index) => (
           <a
             key={index}
