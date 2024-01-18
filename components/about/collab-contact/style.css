@@ -1,0 +1,3 @@
+.contact-link{
+    @apply inline-block  text-base font-medium text-indigo-700 hover:text-indigo-800 dark:text-indigo-600 dark:hover:text-indigo-700;
+}

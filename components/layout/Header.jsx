@@ -49,7 +49,7 @@ export default function Header() {
           />
         </div>
       </div>
-      <nav className="flex p-0 mr-16">
+      <nav className="flex p-0 sm:mr-16">
         {links.map((key, index) => (
           <a
             key={index}

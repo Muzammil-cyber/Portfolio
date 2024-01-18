@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+
 import Post from "./blog/post";
 import { useState } from "react";
 
@@ -35,7 +35,7 @@ const items = [
 ];
 
 export default function Blog() {
-  const [selectedId, setSelectedId] = useState<string>(null);
+  const [selectedId, setSelectedId] = useState<string | number>(null);
   const [filterItem, setfilter] = useState(items);
   const topics = filterItem.map((item) => item.topic);
 
@@ -63,11 +63,7 @@ export default function Blog() {
           {filterItem.map((item) => (
             <Post
               key={item.id}
-              id={item.id}
-              title={item.title}
-              desc={item.desc}
-              topic={item.topic}
-              date={item.date}
+              post={item}
               setId={setSelectedId}
               selectedId={selectedId}
             />
