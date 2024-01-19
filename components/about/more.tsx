@@ -4,6 +4,7 @@ import { SkillLoading } from "./more/skill/loading";
 
 const SkillDynamic = dynamic(() => import("./more/skills"), {
   loading: () => <SkillLoading />,
+  ssr: false,
 });
 
 export default function More() {

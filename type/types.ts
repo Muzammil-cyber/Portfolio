@@ -33,4 +33,13 @@ interface FactType {
 
 }
 
-export type { PostType, SkillType, ExpType, FactType }
+interface ProjectType {
+    id: ID,
+    title: string,
+    desc: string,
+    tech: string[],
+    gitUrl: string,
+    webUrl?: string,
+}
+
+export type { PostType, SkillType, ExpType, FactType, ProjectType }

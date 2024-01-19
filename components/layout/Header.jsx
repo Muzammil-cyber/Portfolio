@@ -9,12 +9,12 @@ export default function Header() {
       link: "/",
     },
     {
-      name: "Portfolio",
-      link: "/Portfolio",
-    },
-    {
       name: "About",
       link: "/about",
+    },
+    {
+      name: "Projects",
+      link: "/projects",
     },
   ];
   function handleClick() {
