@@ -54,7 +54,7 @@ export default function Blog() {
   }
 
   return (
-    <section className="px-4 py-8 flex w-screen bg-white dark:bg-slate-900 justify-center gap-6">
+    <section className="px-4 py-8 flex w-full bg-white dark:bg-slate-900 justify-center gap-6">
       <main className="max-sm:w-full">
         <h3 className="text-3xl font-extrabold dark:text-white mb-4">
           Latest Blog Post
