@@ -1,8 +1,9 @@
+import { ImageType } from "@/type/types";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFilePdf } from "react-icons/fa";
 
-export default function HeroHome() {
+export default function HeroHome({ base64, img }: ImageType) {
   return (
     <section className="bg-white dark:bg-slate-900 lg:flex ">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:text-right text-center lg:py-16 lg:w-1/2">
@@ -16,9 +17,9 @@ export default function HeroHome() {
           IoBM &apos;26
         </h2>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center lg:justify-end sm:space-y-0">
-          <button href="#" className="primary-icon-btn">
+          <a className="primary-icon-btn">
             <FaFilePdf className="fill-white" /> Download CV
-          </button>
+          </a>
           <Link href="/about" className="secondary-btn">
             About me
           </Link>
@@ -26,10 +27,12 @@ export default function HeroHome() {
       </div>
       <div className="lg:flex hidden w-1/2  items-center justify-center">
         <Image
-          src={"/profile-removebg.png"}
+          src={img.src}
           alt="Muzammil's profile picture"
-          width={250}
-          height={250}
+          width={img.width}
+          height={img.height}
+          blurDataURL={base64}
+          placeholder="blur"
           className="rounded-full w-64 h-auto absolute z-30"
         />{" "}
         <div className="w-64 h-80 rounded-full image-back absolute z-0"></div>

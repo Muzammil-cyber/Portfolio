@@ -1,7 +1,7 @@
 export default function LoadingBlog() {
   return (
     <section className="px-4 py-8 flex w-full bg-white dark:bg-slate-900 justify-center gap-6">
-      <main className="max-sm:w-full">
+      <main className="w-full max-w-4xl">
         <h3 className="text-3xl font-extrabold dark:text-white mb-4">
           Latest Blog Post
         </h3>

@@ -1,6 +1,7 @@
+import { ImageType } from "@/type/types";
 import Image from "next/image";
 
-export default function Intro() {
+export default function Intro({ img, base64 }: ImageType) {
   return (
     <section className="flex flex-col md:flex-row md:justify-center items-center gap-4 py-8">
       <article className="sm:w-1/2 text-left space-y-4  text-lg mx-auto">
@@ -32,10 +33,12 @@ export default function Intro() {
       </article>
       <Image
         className="rounded-full sm:w-1/2 sm:h-auto h-[400px] w-[400px] image-back"
-        src={"/profile-removebg.png"}
+        src={img.src}
         alt="It's a me, Muzammil"
-        width={500}
-        height={500}
+        width={img.width}
+        height={img.height}
+        placeholder="blur"
+        blurDataURL={base64}
       />
     </section>
   );

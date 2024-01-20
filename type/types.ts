@@ -42,4 +42,14 @@ interface ProjectType {
     webUrl?: string,
 }
 
-export type { PostType, SkillType, ExpType, FactType, ProjectType }
+interface ImageType {
+    img: {
+        src: string;
+        height: number;
+        width: number;
+    };
+    base64: string;
+
+}
+
+export type { PostType, SkillType, ExpType, FactType, ProjectType, ImageType }
