@@ -33,6 +33,6 @@
   }
   
   .container[data-darkmode="true"] .icon {
-    color: #501a96;
+    @apply text-indigo-600
   }
 

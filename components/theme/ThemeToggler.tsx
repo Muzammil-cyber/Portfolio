@@ -25,7 +25,7 @@ const ThemeToggler = () => {
             exit={{ y: 30, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {/* {isDark ? <LuMoon /> : <LuSun />} */}
+            {isDark ? <LuMoon /> : <LuSun />}
           </motion.i>
         </AnimatePresence>
       </motion.div>

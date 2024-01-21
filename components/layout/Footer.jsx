@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
 
@@ -41,7 +39,7 @@ export default function Footer() {
             <Link
               key={index}
               href={link.link}
-              className="text-xl px-2 py-1 text-gray-700 dark:text-white font-semibold rounded hover:text-indigo-800 dark:hover:text-indigo-500"
+              className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-500"
             >
               {link.icon}
             </Link>
