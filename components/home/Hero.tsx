@@ -17,9 +17,14 @@ export default function HeroHome({ base64, img }: ImageType) {
           IoBM &apos;26
         </h2>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center lg:justify-end sm:space-y-0">
-          <a className="primary-icon-btn">
+          <Link
+            className="primary-icon-btn"
+            href={"/Muzammil-Loya.pdf"}
+            download
+            target="_blank"
+          >
             <FaFilePdf className="fill-white" /> Download CV
-          </a>
+          </Link>
           <Link href="/about" className="secondary-btn">
             About me
           </Link>
