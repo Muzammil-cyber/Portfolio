@@ -20,7 +20,7 @@ export default function Post({
     const msPerMonth = msPerDay * 30;
     const msPerYear = msPerDay * 365;
     const current = new Date();
-    const created = new Date(post.date);
+    const created = new Date(post.createdAt);
     const elapsed = current.getTime() - created.getTime();
     if (elapsed < msPerMinute) {
       return Math.round(elapsed / 1000) + " seconds ago";
@@ -35,7 +35,7 @@ export default function Post({
     } else {
       return Math.round(elapsed / msPerYear) + " years ago";
     }
-  }, [post.date]);
+  }, [post.createdAt]);
 
   return (
     <>
@@ -72,11 +72,11 @@ export default function Post({
       <AnimatePresence>
         {selectedId == post.id && (
           <motion.div className="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center p-4 cursor-not-allowed">
-            <motion.div className="max-w-xl w-full bg-slate-200 dark:bg-slate-800 rounded-md p-4 cursor-default">
+            <motion.div className="max-w-xl w-full max-h-full bg-slate-200 dark:bg-slate-800 rounded-md p-4 cursor-default overflow-y-auto shadow-md">
               <motion.h1 className="text-3xl font-extrabold dark:text-white">
                 {post.title}
               </motion.h1>
-              <motion.p className="dark:text-slate-400 text-xl">
+              <motion.p className="dark:text-slate-400 text-xl ">
                 {post.desc}
               </motion.p>
               <motion.p className="text-sm dark:text-slate-300 my-4">

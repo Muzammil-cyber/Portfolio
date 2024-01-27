@@ -1,14 +1,16 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import LoadingTheme from "../theme/loading";
 // import ThemeToggler from "../theme/ThemeToggler";
 // import Logo from "./logo";
 
 const LogoDynamic = dynamic(() => import("./logo"), {
-  ssr: false,
+  ssr: true,
 });
 const ThemeDynamic = dynamic(() => import("../theme/ThemeToggler"), {
   ssr: false,
+  loading: () => <LoadingTheme />,
 });
 
 export default function Header() {

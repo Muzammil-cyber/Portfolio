@@ -1,3 +1,4 @@
+import { getPorjects } from "@/api/req";
 import LoadingProject from "@/components/projects/loading";
 import dynamic from "next/dynamic";
 
@@ -12,6 +13,7 @@ const DynamicProjects = dynamic(() => import("@/components/projects"), {
   ssr: false,
 });
 
-export default function ProjectsPage() {
-  return <DynamicProjects />;
+export default async function ProjectsPage() {
+  const projects = await getPorjects();
+  return <DynamicProjects projects={projects} />;
 }

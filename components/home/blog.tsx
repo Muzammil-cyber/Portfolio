@@ -1,40 +1,11 @@
 "use client";
 
+import { PostType } from "@/type/types";
 import Post from "./blog/post";
 import { useState } from "react";
 
-const items = [
-  {
-    id: "20",
-    title: "Blog Title",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    date: "12/5/2004",
-    topic: "javascript",
-  },
-  {
-    id: "5",
-    title: "Blog Title",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    date: "1/1/2024",
-    topic: "html",
-  },
-  {
-    id: "2",
-    title: "Blog Title",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    date: "1/1/2024",
-    topic: "Tailwindcss",
-  },
-  {
-    id: "3",
-    title: "Blog Title",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    date: "12/5/2004",
-    topic: "javascript",
-  },
-];
 
-export default function Blog() {
+export default function Blog({ items }: { items: PostType[] }) {
   const [selectedId, setSelectedId] = useState<string | number>(null);
   const [filterItem, setfilter] = useState(items);
   const topics = filterItem.map((item) => item.topic);
@@ -60,7 +31,7 @@ export default function Blog() {
           Latest Blog Post
         </h3>
         <div className="flex flex-col max-sm:items-center w-full gap-4">
-          {filterItem.map((item) => (
+          {filterItem.map((item: PostType) => (
             <Post
               key={item.id}
               post={item}

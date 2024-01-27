@@ -6,7 +6,7 @@ interface PostType {
     title: string,
     desc: string,
     topic: string,
-    date: string,
+    createdAt: string,
 }
 
 interface SkillType {
