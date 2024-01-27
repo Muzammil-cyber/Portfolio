@@ -1,7 +1,8 @@
 import Header from "@/components/layout/Header";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
-import GTag from "./gtag";
+
+import { GoogleAnalytics } from "@next/third-parties/google";
 import DarkMode from "@/context/DarkMode";
 import { Metadata, Viewport } from "next";
 
@@ -33,13 +34,14 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className=" h-screen bg-in">
-      <GTag />
+      {/* <GTag /> */}
       {/* <body className={`flex-col h-screen`}> */}
       <DarkMode>
         <Header />
         {children}
         <Footer />
       </DarkMode>
+      <GoogleAnalytics gaId="G-7DMPFKPXZH" />
       {/* </body> */}
     </html>
   );
