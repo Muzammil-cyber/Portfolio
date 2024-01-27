@@ -27,6 +27,8 @@ export default function Footer() {
             a question or just want to connect 📭
           </p>
           <Link
+            target="_blank"
+            rel="author"
             href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
             className="link"
           >
@@ -37,6 +39,8 @@ export default function Footer() {
         <nav className="px-2 pt-2 pb-4 flex flex-col sm:flex-row  sm:p-0 w-1/2 justify-center sm:justify-end items-end">
           {links.map((link, index) => (
             <Link
+              target="_blank"
+              rel="external"
               key={index}
               href={link.link}
               className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-500"

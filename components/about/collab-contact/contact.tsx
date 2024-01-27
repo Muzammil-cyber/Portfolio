@@ -7,6 +7,7 @@ export default function Contact() {
       <p>
         Drop me a line!{" "}
         <Link
+          rel="author"
           href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
           className="contact-link"
         >
@@ -14,6 +15,7 @@ export default function Contact() {
         </Link>{" "}
         <Link
           target="_blank"
+          rel="external"
           href={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
           className="contact-link"
         >
@@ -22,6 +24,7 @@ export default function Contact() {
         even{" "}
         <Link
           target="_blank"
+          rel="external"
           href={`${process.env.NEXT_PUBLIC_INSTAGRAM}`}
           className="contact-link"
         >

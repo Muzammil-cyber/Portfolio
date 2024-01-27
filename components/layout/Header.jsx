@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import LoadingTheme from "../theme/loading";
+import Link from "next/link";
 // import ThemeToggler from "../theme/ThemeToggler";
 // import Logo from "./logo";
 
@@ -40,13 +41,13 @@ export default function Header() {
       </div>
       <nav className="flex p-0 sm:mr-16">
         {links.map((key, index) => (
-          <a
+          <Link
             key={index}
             href={key.link}
             className="block px-2 py-1 text-gray-500 dark:text-white font-semibold rounded hover:text-indigo-500 dark:hover:text-indigo-500"
           >
             {key.name}
-          </a>
+          </Link>
         ))}
       </nav>
       <ThemeDynamic />

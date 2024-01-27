@@ -18,10 +18,11 @@ export default function HeroHome({ base64, img }: ImageType) {
         </h2>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center lg:justify-end sm:space-y-0">
           <Link
+            rel="alternate"
             className="primary-icon-btn"
             href={"/Muzammil-Loya.pdf"}
-            download
             target="_blank"
+            type="application/pdf"
           >
             <FaFilePdf className="fill-white" /> Download CV
           </Link>

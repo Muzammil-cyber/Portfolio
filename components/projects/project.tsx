@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ProjectType } from "@/type/types";
 import { PiGlobe } from "react-icons/pi";
+import Link from "next/link";
 
 export default function Project({
   title,
@@ -32,25 +33,25 @@ export default function Project({
           ))}
         </div>
         <div className="flex space-x-2">
-          <a
+          <Link
             href={gitUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="external"
             className="secondary-icon-btn"
           >
             Source Code
             {/* <PiGithubLogoFill className="text-2xl" /> */}
-          </a>
+          </Link>
           {webUrl && (
-            <a
+            <Link
               href={webUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="external"
               className="secondary-icon-btn"
             >
               <PiGlobe className="text-2xl" />
               Vist Website
-            </a>
+            </Link>
           )}
         </div>
       </div>

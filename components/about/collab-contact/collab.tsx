@@ -9,6 +9,7 @@ export default function Collab() {
         be shy, hit my inbox – let&apos;s make magic happen! ✨
       </p>
       <Link
+        rel="author"
         href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
         className="contact-link mt-4"
       >

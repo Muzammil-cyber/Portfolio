@@ -1,5 +1,6 @@
 import { ImageType } from "@/type/types";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Intro({ img, base64 }: ImageType) {
   return (
@@ -23,12 +24,13 @@ export default function Intro({ img, base64 }: ImageType) {
         </p>
         <p className="text-slate-600 dark:text-slate-400">
           Sounds interesting? Feel free to{" "}
-          <a
+          <Link
+            rel="author"
             href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
             className="link !text-lg"
           >
             contact me!&#x1F4EC;
-          </a>
+          </Link>
         </p>
       </article>
       <Image
