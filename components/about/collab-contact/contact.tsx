@@ -13,14 +13,16 @@ export default function Contact() {
           Email,
         </Link>{" "}
         <Link
-          href={`mailto:${process.env.NEXT_PUBLIC_LINKEDIN}`}
+          target="_blank"
+          href={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
           className="contact-link"
         >
           LinkedIn,
         </Link>
         even{" "}
         <Link
-          href={`mailto:${process.env.NEXT_PUBLIC_INSTAGRAM}`}
+          target="_blank"
+          href={`${process.env.NEXT_PUBLIC_INSTAGRAM}`}
           className="contact-link"
         >
           Instagram
