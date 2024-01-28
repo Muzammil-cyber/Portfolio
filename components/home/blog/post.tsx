@@ -53,6 +53,10 @@ export default function Post({
         <motion.h1 className="text-3xl font-extrabold dark:text-white">
           {post.title}
         </motion.h1>
+        <p className="hidden">
+          {" "}
+          <RichText content={post.desc} />
+        </p>
         <motion.div className="mt-4 flex justify-between items-center">
           <motion.p className="text-sm dark:text-slate-300">
             <motion.span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">

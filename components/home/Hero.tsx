@@ -1,7 +1,8 @@
 import { ImageType } from "@/type/types";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFilePdf } from "react-icons/fa";
+
+import HeroLink from "./HeroLink";
 
 export default function HeroHome({ base64, img }: ImageType) {
   return (
@@ -17,16 +18,8 @@ export default function HeroHome({ base64, img }: ImageType) {
           IoBM &apos;26
         </h2>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center lg:justify-end sm:space-y-0">
-          <Link
-            rel="alternate"
-            className="primary-icon-btn"
-            href={"/Muzammil-Loya.pdf"}
-            target="_blank"
-            type="application/pdf"
-          >
-            <FaFilePdf className="fill-white" /> Download CV
-          </Link>
-          <Link href="/about" className="secondary-btn">
+          <HeroLink />
+          <Link rel="canonical" href="/about" className="secondary-btn">
             About me
           </Link>
         </div>
