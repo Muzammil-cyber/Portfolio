@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://muzammilloya-portfolio.vercel.app/sitemap.xml
