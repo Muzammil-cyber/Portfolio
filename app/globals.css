@@ -4,47 +4,70 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
 
-@layer components {
-  .modal {
-    @apply fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-75;
-  }
-  .modal-content {
-    @apply bg-white rounded-lg p-6;
-  }
-  .modal-enter {
-    @apply animation slideIn 0.2s ease-out;
-  }
-  .modal-leave {
-    @apply animation slideOut 0.2s ease-out;
+
+@layer base {
+  h1,h2,h3,h4,h5,p,button,a{
+    @apply text-slate-900 dark:text-white
   }
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateY(100%);
+@layer components{
+  .link{
+    @apply text-indigo-700 hover:text-indigo-800 dark:text-indigo-600 dark:hover:text-indigo-700 text-sm font-sans font-semibold hover:cursor-pointer
   }
-  100% {
-    transform: translateY(0);
+  .primary-icon-btn {
+    @apply inline-flex justify-center gap-2 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-900
   }
-}
-@keyframes slideOut {
-  0% {
-    transform: translateY(0);
+  .secondary-icon-btn {
+   @apply inline-flex justify-center items-center gap-2 py-1 px-2  font-medium text-center text-slate-900 rounded-lg border border-slate-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 dark:text-white dark:border-slate-700 dark:hover:bg-slate-700 dark:focus:ring-slate-800
   }
-  100% {
-    transform: translateY(100%);
+  .secondary-btn {
+    @apply inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center  rounded-lg border border-slate-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100  dark:border-slate-700 dark:hover:bg-slate-700 dark:focus:ring-slate-800
+  }
+  
+  .spinner {
+    width: 88px;
+    height: 88px;
+    display: grid;
+    border: 7px solid #0000;
+    border-radius: 50%;
+    border-color: #dbdcef #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+  }
+  
+  .spinner::before,
+  .spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 3.5px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  
+  .spinner::before {
+    border-color: #474bff #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+  }
+  
+  .spinner::after {
+    margin: 14px;
+  }
+  
+  @keyframes spinner-e04l1k {
+    100% {
+       transform: rotate(1turn);
+    }
   }
 }
 
-.color-content {
-  @apply p-10 bg-gray-800 text-white text-center;
-}
-.name {
-  @apply text-2xl font-bold sm:text-3xl;
-  font-family: "Caveat", cursive;
-}
-.role {
-  @apply mt-2 text-lg font-medium sm:text-2xl italic;
-  font-family: "Dancing Script", cursive;
+@layer utilities {
+  .image-back {
+      background-color: transparent;
+opacity: 0.9;
+background: linear-gradient(135deg, #3d44de55 25%, transparent 25%) -7px 0/ 14px 14px, linear-gradient(225deg, #3d44de 25%, transparent 25%) -7px 0/ 14px 14px, linear-gradient(315deg, #3d44de55 25%, transparent 25%) 0px 0/ 14px 14px, linear-gradient(45deg, #3d44de 25%, transparent 25%) 0px 0/ 14px 14px;
+  }
 }

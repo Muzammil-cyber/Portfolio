@@ -1,0 +1,9 @@
+{
+    "name": "Muzammil Loya's Portfolio",
+    "short_name": "Muzammil's Portfolio",
+    "description": "An application built with Next.js, A portfolio of Muzammil Loya",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#4438ca"
+}
