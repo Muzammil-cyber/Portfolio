@@ -9,11 +9,11 @@ import { Metadata, Viewport } from "next";
 export const metadata: Metadata = {
   title: {
     template: "%s | Muzammil",
-    default: "Muzammil Loya", // a default is required when creating a template
+    default: "Muzammil Loya's Portfolio", // a default is required when creating a template
   },
 
   description:
-    "I'm Muzammil Loya, a web developer with a passion for weaving code into vibrant, user-centric experiences. My toolbox overflows with the building blocks of the modern web: JavaScript, TypeScript, HTML, CSS, and Node.js. These aren't just tools; they're instruments I use to orchestrate symphonies of functionality and beauty.But frameworks? I don't just dabble - I dive deep. ReactJS, NextJS, Bootstrap, Material UI, Chakra UI? Name it, I've tamed it. These frameworks are my companions in crafting responsive, intuitive web applications that seamlessly adapt to any screen size or device.The future of the web excites me, and that's why I'm peering into the world of Web3 and the Motoko language. I've grasped its essentials, and I'm eager to explore its potential for decentralizing the web and building experiences driven by community and ownership.My portfolio isn't just a showcase of my skills; it's a testament to my dedication to pushing the boundaries of web development. Each project is a pixel-perfect canvas where I paint interactive stories, solve real-world problems, and leave users with a touch of digital magic.So, whether you're looking for a skilled developer to bring your web vision to life, or simply curious about the latest trends in web3, come explore my digital canvas. You might just discover that I'm not just weaving code, I'm weaving the future of the web, one pixel at a time.",
+    "Experienced in JavaScript, TypeScript, HTML, CSS, and Node.js. Creates responsive web apps using frameworks like  NextJS, TailwindCSS and more. Exploring Web3",
   keywords: [
     "Web Developer",
     "Full stack Developer",
