@@ -48,7 +48,7 @@ export default function Post({
         className="max-w-lg bg-slate-200 dark:bg-slate-800 rounded-md p-4 cursor-pointer"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true }}
       >
         <motion.h1 className="text-3xl font-extrabold dark:text-white">
           {post.title}

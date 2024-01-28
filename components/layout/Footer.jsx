@@ -43,7 +43,7 @@ export default function Footer() {
               rel="external"
               key={index}
               href={link.link}
-              className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-500"
+              className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-500 max-sm:w-12 max-sm:h-12"
             >
               {link.icon}
             </Link>

@@ -16,7 +16,7 @@ export default function Project({
       initial={{ opacity: 0, scale: 0.2 }}
       whileInView={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.05 }}
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true }}
       className="rounded-lg w-full max-w-lg bg-slate-100 dark:bg-slate-800 text-left p-4 space-y-2"
     >
       <h3 className="text-3xl font-extrabold">{title}</h3>
