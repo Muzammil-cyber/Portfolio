@@ -2,7 +2,7 @@ import Header from "@/components/layout/Header";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 
-import { GoogleAnalytics } from "@next/third-parties/google";
+// import { GoogleAnalytics } from "@next/third-parties/google";
 import DarkMode from "@/context/DarkMode";
 import { Metadata, Viewport } from "next";
 

@@ -1,10 +1,11 @@
+import { RichTextContent } from "@graphcms/rich-text-types";
 import { IconType } from "react-icons";
 
 type ID = string | number
 interface PostType {
     id: ID,
     title: string,
-    desc: string,
+    desc: RichTextContent,
     topic: string,
     createdAt: string,
 }

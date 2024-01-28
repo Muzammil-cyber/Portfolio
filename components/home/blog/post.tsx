@@ -1,5 +1,8 @@
 import { PostType } from "@/type/types";
+import { RichText } from "@graphcms/rich-text-react-renderer";
+
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { Dispatch, SetStateAction, useCallback } from "react";
 import { PiReadCvLogoFill } from "react-icons/pi";
 
@@ -50,9 +53,6 @@ export default function Post({
         <motion.h1 className="text-3xl font-extrabold dark:text-white">
           {post.title}
         </motion.h1>
-        <motion.p className="truncate dark:text-slate-400 text-lg">
-          {post.desc}
-        </motion.p>
         <motion.div className="mt-4 flex justify-between items-center">
           <motion.p className="text-sm dark:text-slate-300">
             <motion.span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">
@@ -64,7 +64,7 @@ export default function Post({
             onClick={() => setId(post.id)}
             className="secondary-icon-btn"
           >
-            Read More
+            Read
             <PiReadCvLogoFill className="text-2xl" />
           </motion.button>
         </motion.div>
@@ -76,9 +76,43 @@ export default function Post({
               <motion.h1 className="text-3xl font-extrabold dark:text-white">
                 {post.title}
               </motion.h1>
-              <motion.p className="dark:text-slate-400 text-xl ">
+              {/* <motion.p className="dark:text-slate-400 text-xl ">
+                <RichText content={post.desc} />
                 {post.desc}
-              </motion.p>
+              </motion.p> */}
+              <RichText
+                content={post.desc}
+                renderers={{
+                  a: ({ children, openInNewTab, href, rel, ...rest }) => {
+                    if (href.match(/^https?:\/\/|^\/\//i)) {
+                      return (
+                        <Link
+                          href={href}
+                          target={openInNewTab ? "_blank" : "_self"}
+                          rel={rel || "external"}
+                          className="link text-xl"
+                          {...rest}
+                        >
+                          {children}
+                        </Link>
+                      );
+                    }
+
+                    return (
+                      <Link href={href} {...rest} className="link">
+                        {children}
+                      </Link>
+                    );
+                  },
+                  p: ({ children }: any) => (
+                    <p className="dark:text-slate-200 text-xl">{children}</p>
+                  ),
+                  li: ({ children }: any) => (
+                    <li className="dark:text-slate-200 text-xl">{children}</li>
+                  ),
+                }}
+              />
+              {/* <AnimateDesc desc={post.desc} /> */}
               <motion.p className="text-sm dark:text-slate-300 my-4">
                 <motion.span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">
                   {post.topic}
@@ -98,3 +132,4 @@ export default function Post({
     </>
   );
 }
+

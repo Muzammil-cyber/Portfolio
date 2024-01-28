@@ -1,14 +1,18 @@
 "use server";
 import { gql } from "graphql-request";
-import hygraph from "./headers";
+
 import { PostType, ProjectType } from "@/type/types";
+
+import { GraphQLClient } from "graphql-request";
+
+const hygraph = new GraphQLClient(process.env.GRAPHQL_API);
 
 export async function getPosts(): Promise<PostType[]> {
   const QUERY = gql`
     {
       posts {
         desc {
-          markdown
+          raw
         }
         id
         title
@@ -19,8 +23,8 @@ export async function getPosts(): Promise<PostType[]> {
   `;
   const res: any = await hygraph.request(QUERY);
 
-  const posts: PostType[] = res.posts.map((post) => ({
-    desc: post.desc.markdown,
+  const posts: PostType[] = res.posts.map((post: any) => ({
+    desc: post.desc.raw,
     id: post.id,
     title: post.title,
     createdAt: post.createdAt,
