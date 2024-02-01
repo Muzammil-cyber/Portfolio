@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     "blog",
     "blogger",
   ],
-  verification: { google: "zlT0pnlw_0XvL7gPOhY1rwmoUUDMQOKcbqyhVRNcEBc" },
+
+  verification: {
+    google: "zlT0pnlw_0XvL7gPOhY1rwmoUUDMQOKcbqyhVRNcEBc",
+    other: { "msvalidate.01": "AD439BD747F8237BDB277E0346A6C91B" },
+  },
   category: "technology",
 };
 
