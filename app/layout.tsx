@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </DarkMode>
-      <GoogleTagManager gtmId="G-7DMPFKPXZH" />
+      <GoogleTagManager gtmId={process.env.GTM} />
       {/* </body> */}
     </html>
   );
