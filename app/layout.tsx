@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 import { GoogleTagManager } from "@next/third-parties/google";
 import DarkMode from "@/context/DarkMode";
@@ -46,6 +47,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <SpeedInsights />
+        <Analytics />
       </DarkMode>
       <GoogleTagManager gtmId={process.env.GTM} />
       {/* </body> */}
