@@ -1,6 +1,7 @@
-import Header from "@/components/layout/Header";
 import "./globals.css";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { GoogleTagManager } from "@next/third-parties/google";
 import DarkMode from "@/context/DarkMode";
