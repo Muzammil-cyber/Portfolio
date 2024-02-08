@@ -1,13 +1,13 @@
 "use server";
+import { unstable_noStore as noStore } from "next/cache";
 import { gql } from "graphql-request";
-
 import { PostType, ProjectType } from "@/type/types";
-
 import { GraphQLClient } from "graphql-request";
 
 const hygraph = new GraphQLClient(process.env.GRAPHQL_API);
 
 export async function getPosts(): Promise<PostType[]> {
+  noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {
       posts {
@@ -34,6 +34,7 @@ export async function getPosts(): Promise<PostType[]> {
 }
 
 export async function getPorjects(): Promise<ProjectType[]> {
+  noStore();
   const QUERY = gql`
     {
       projects {
