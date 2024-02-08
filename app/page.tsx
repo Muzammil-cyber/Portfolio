@@ -1,5 +1,5 @@
 // import { getPosts, hygraph } from "@/api/req";
-import { hygraph } from "@/api/req";
+import { hygraph } from "@/api/header";
 import HeroHome from "@/components/home/Hero";
 import LoadingBlog from "@/components/home/blog/loading";
 import { PostType } from "@/type/types";
@@ -13,7 +13,7 @@ const DynamicBlog = dynamic(() => import("@/components/home/blog"), {
   ssr: false,
 });
 
-export async function getPosts(): Promise<PostType[]> {
+async function getPosts(): Promise<PostType[]> {
   // noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {

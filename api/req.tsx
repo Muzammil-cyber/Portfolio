@@ -3,8 +3,9 @@ import { unstable_noStore as noStore } from "next/cache";
 import { gql } from "graphql-request";
 import { PostType, ProjectType } from "@/type/types";
 import { GraphQLClient } from "graphql-request";
+import { hygraph } from "./header";
 
-export const hygraph = new GraphQLClient(process.env.GRAPHQL_API);
+
 
 
 
