@@ -14,6 +14,7 @@ const DynamicBlog = dynamic(() => import("@/components/home/blog"), {
 });
 
 async function getPosts(): Promise<PostType[]> {
+  "use server";
   noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {
