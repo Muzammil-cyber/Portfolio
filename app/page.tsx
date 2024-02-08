@@ -1,4 +1,4 @@
-import { unstable_noStore as noStore } from "next/cache";
+// import { getPosts, hygraph } from "@/api/req";
 import { hygraph } from "@/api/header";
 import HeroHome from "@/components/home/Hero";
 import LoadingBlog from "@/components/home/blog/loading";
@@ -14,8 +14,7 @@ const DynamicBlog = dynamic(() => import("@/components/home/blog"), {
 });
 
 async function getPosts(): Promise<PostType[]> {
-  "use server";
-  noStore(); // disable caching for this page because it'll be changing frequently
+  // noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {
       posts {
