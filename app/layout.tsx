@@ -26,7 +26,9 @@ export const metadata: Metadata = {
     "blog",
     "blogger",
   ],
-
+  authors: [{ name: "Muzammil Loya" }],
+  creator: "Muzammil Loya",
+  publisher: "Muzammil Loya",
   verification: {
     google: "zlT0pnlw_0XvL7gPOhY1rwmoUUDMQOKcbqyhVRNcEBc",
     other: { "msvalidate.01": "AD439BD747F8237BDB277E0346A6C91B" },
@@ -41,7 +43,6 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className=" h-screen bg-in">
-      {/* <GTag /> */}
       {/* <body className={`flex-col h-screen`}> */}
       <DarkMode>
         <Header />

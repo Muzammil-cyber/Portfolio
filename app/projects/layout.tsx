@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Works done by Muzammil Loya",
+  description:
+    "Discover the exceptional skill of Muzammil Loya through a showcase of his impressive projects.",
   keywords: [
     "HTML",
     "CSS",
@@ -25,7 +26,7 @@ export default function Layout({ children }) {
         <p className="text-base mb-8">Everthing that I have build 🛠</p>
         {children}
         <Link
-          href="https://github.com/muzammil-cyber"
+          href="https://github.com/Muzammil-cyber?tab=repositories"
           rel="external"
           target="_blank"
           className="secondary-btn my-8 mx-4 font-bold uppercase"
