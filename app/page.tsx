@@ -17,7 +17,7 @@ async function getPosts(): Promise<PostType[]> {
   // noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {
-      posts {
+      posts(last: 10) {
         desc {
           raw
         }

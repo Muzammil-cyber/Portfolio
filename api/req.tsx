@@ -1,19 +1,14 @@
 "use server";
 import { unstable_noStore as noStore } from "next/cache";
 import { gql } from "graphql-request";
-import { PostType, ProjectType } from "@/type/types";
-import { GraphQLClient } from "graphql-request";
+import { ProjectType } from "@/type/types";
 import { hygraph } from "./header";
-
-
-
-
 
 export async function getPorjects(): Promise<ProjectType[]> {
   noStore();
   const QUERY = gql`
     {
-      projects {
+      projects(last: 10) {
         id
         desc
         gitUrl
