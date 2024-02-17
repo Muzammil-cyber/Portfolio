@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Web Developer | Muzammil Loya's Projects",
   description:
-    "Discover the exceptional skill of Muzammil Loya through a showcase of his impressive projects.",
+    "Check out my web development portfolio showcasing projects like an NFT marketplace built with Next.js and MongoDB, a dog dating app, and more! I use technologies like HTML, CSS, JavaScript, VBscript, and Node.js.",
   keywords: [
     "HTML",
     "CSS",

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Web Developer 🚀 | Muzammil Loya's Skills & Experience",
   description:
-    "Unlock the future of web development with a web developer experienced in JavaScript, HTML, CSS, and Nodejs. Explore the possibilities of Motoko language for Web3 applications and harness the power of frameworks like NextJS and Chakra UI.",
+    "Hi, I'm Muzammil, a 19-year-old web developer skilled in HTML, CSS, JavaScript, React, Node.js, and more. Let's connect!",
   keywords: [
     "HTML",
     "CSS",
@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     "Tailwind CSS",
     "Web3",
     "Motoko",
+    "freelance",
+    "web developer",
+    "skills",
+    "experience",
   ],
 };
 

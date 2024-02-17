@@ -9,13 +9,10 @@ import DarkMode from "@/context/DarkMode";
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Muzammil",
-    default: "Muzammil Loya's Portfolio", // a default is required when creating a template
-  },
+  title: "Full-Stack Web Developer | Muzammil Loya's Portfolio", // a default is required when creating a template,
 
   description:
-    "Experienced in JavaScript, TypeScript, HTML, CSS, and Node.js. Creates responsive web apps using frameworks like  NextJS, TailwindCSS and more. Exploring Web3",
+    "I'm Muzammil Loya, a full-stack web developer passionate about clean code & UX. Check out my portfolio and recent blog posts on JavaScript & Git!",
   keywords: [
     "Web Developer",
     "Full stack Developer",
