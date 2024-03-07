@@ -9,7 +9,7 @@ import DarkMode from "@/context/DarkMode";
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: "Full-Stack Web Developer | Muzammil Loya's Portfolio", // a default is required when creating a template,
+  title: "Full-Stack Web Developer | Muzammil Loya's Portfolio",
 
   description:
     "I'm Muzammil Loya, a full-stack web developer passionate about clean code & UX. Check out my portfolio and recent blog posts on JavaScript & Git!",
@@ -26,10 +26,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Muzammil Loya" }],
   creator: "Muzammil Loya",
   publisher: "Muzammil Loya",
-  verification: {
-    google: "zlT0pnlw_0XvL7gPOhY1rwmoUUDMQOKcbqyhVRNcEBc",
-    other: { "msvalidate.01": "AD439BD747F8237BDB277E0346A6C91B" },
-  },
+
   category: "technology",
 };
 
