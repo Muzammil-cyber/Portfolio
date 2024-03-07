@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function HeroLink() {
   return (
     <Link
-      rel="alternate"
+      rel="nocrawal, nofollow"
       className="primary-icon-btn"
       href={"/Muzammil-Loya.pdf"}
       target="_blank"

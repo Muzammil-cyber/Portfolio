@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Muzammil Loya" }],
   creator: "Muzammil Loya",
   publisher: "Muzammil Loya",
-
   category: "technology",
 };
 
