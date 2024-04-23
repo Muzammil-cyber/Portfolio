@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaDev } from "react-icons/fa";
 import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
 
 export default function Footer() {
@@ -12,6 +13,11 @@ export default function Footer() {
       icon: <LuGithub />,
       name: "GitHub",
       link: process.env.NEXT_PUBLIC_GITHUB,
+    },
+    {
+      icon: <FaDev />,
+      name: "Dev.to",
+      link: process.env.NEXT_PUBLIC_DEVTO,
     },
   ];
 
@@ -41,7 +47,7 @@ export default function Footer() {
             <Link
               target="_blank"
               rel="external"
-              key={index}
+              key={"ref-" + index}
               href={link.link}
               className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-500 max-sm:w-12 max-sm:h-12"
             >

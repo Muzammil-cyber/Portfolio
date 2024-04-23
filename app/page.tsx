@@ -9,13 +9,10 @@ import { PostType } from "@/type/types";
 import { getImageLocal } from "@/utils/image";
 import { gql } from "graphql-request";
 
-import dynamic from "next/dynamic";
+
 import { Suspense } from "react";
 
-// const DynamicBlog = dynamic(() => import("@/components/home/blog"), {
-//   loading: () => <LoadingBlog />,
-//   ssr: false,
-// });
+
 
 
 
@@ -29,7 +26,7 @@ export default async function Home() {
       <Suspense fallback={<LoadingBlog />}>
         <DynamicBlog />
       </Suspense>
-      {/* <DynamicBlog items={posts} /> */}
+
     </main>
   );
 }

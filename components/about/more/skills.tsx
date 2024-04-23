@@ -12,7 +12,7 @@ export default function Skills() {
       </p>
       <ul className="flex flex-wrap gap-2 w-full">
         {SkillSet.map((skill) => (
-          <Skill key={skill.id} {...skill} />
+          <Skill key={"skill-" + skill.id} {...skill} />
         ))}
       </ul>
     </article>

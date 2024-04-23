@@ -1,19 +1,12 @@
 "use client";
 
-import dynamic from "next/dynamic";
+
 import LoadingTheme from "../theme/loading";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import ThemeToggler from "../theme/ThemeToggler";
-// import Logo from "./logo";
-
-const LogoDynamic = dynamic(() => import("./logo"), {
-  ssr: true,
-});
-const ThemeDynamic = dynamic(() => import("../theme/ThemeToggler"), {
-  ssr: false,
-  loading: () => <LoadingTheme />,
-});
+import ThemeToggler from "../theme/ThemeToggler";
+import { Suspense } from "react";
+import Logo from "./logo";
 
 export default function Header() {
   const links = [
@@ -35,7 +28,9 @@ export default function Header() {
   return (
     <header className="bg-slate-100 dark:bg-slate-800 flex justify-between  px-4 py-1 sm:py-3 items-center flex-1">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
-        <LogoDynamic />
+        <Suspense>
+          <Logo />
+        </Suspense>
       </div>
       <nav className="flex p-0 sm:mr-16">
         {links.map((key, index) => (
@@ -49,7 +44,9 @@ export default function Header() {
           </Link>
         ))}
       </nav>
-      <ThemeDynamic />
+      <Suspense fallback={<LoadingTheme />}>
+        <ThemeToggler />
+      </Suspense>
     </header>
   );
 }

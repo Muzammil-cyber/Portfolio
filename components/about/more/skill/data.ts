@@ -1,6 +1,6 @@
-import { FaCss3, FaGitAlt, FaHtml5, FaJava, FaNode, FaReact } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiTypescript, SiJavascript, SiMongodb, SiTailwindcss, SiChakraui, SiPostgresql, SiFramer } from "react-icons/si";
+import { FaCss3, FaDocker, FaGitAlt, FaHtml5, FaNode, FaReact, FaStripe } from "react-icons/fa";
+import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
+import { SiTypescript, SiJavascript, SiMongodb, SiTailwindcss, SiChakraui, SiPostgresql, SiFramer, SiFirebase, SiPayloadcms } from "react-icons/si";
 import { SkillType } from "@/type/types";
 
 export const SkillSet: SkillType[] = [
@@ -94,5 +94,35 @@ export const SkillSet: SkillType[] = [
         theme: "bg-orange-500 !text-3xl"
 
     },
+    {
+        id: 11,
+        title: 'React Native',
+        Icon: TbBrandReactNative,
+        theme: "bg-purple-800 !text-3xl"
+    },
+    {
+        id: 12,
+        title: 'Stripe',
+        Icon: FaStripe,
+        theme: "bg-indigo-500 !text-3xl"
+    },
+    {
+        id: 13,
+        title: 'FireBase',
+        Icon: SiFirebase,
+        theme: "bg-orange-400 !text-2xl"
+    },
+    {
+        id: 14,
+        title: 'CMS',
+        Icon: SiPayloadcms,
+        theme: "bg-slate-800 !text-2xl"
+    },
+    {
+        id: 15,
+        title: 'Docker',
+        Icon: FaDocker,
+        theme: "bg-blue-500 !text-3xl"
+    }
 
 ];

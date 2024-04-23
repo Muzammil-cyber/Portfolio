@@ -1,17 +1,31 @@
-import dynamic from "next/dynamic";
 import Experience from "./more/experience";
 import { SkillLoading } from "./more/skill/loading";
+import { Suspense } from "react";
 
-const SkillDynamic = dynamic(() => import("./more/skills"), {
-  loading: () => <SkillLoading />,
-  ssr: false,
-});
+import Skills from "./more/skills";
+
+export const SkillLoadings = () => {
+  return (
+    <>
+      <SkillLoading />
+      <SkillLoading />
+      <SkillLoading />
+      <SkillLoading />
+      <SkillLoading />
+      <SkillLoading />
+      <SkillLoading />
+      <SkillLoading />
+    </>
+  );
+};
 
 export default function More() {
   return (
     <section className="flex flex-col sm:flex-row w-full py-8 gap-4">
-      <SkillDynamic />
-      {/* <Skills /> */}
+      <Suspense fallback={<SkillLoadings />}>
+        <Skills />
+      </Suspense>
+
       <Experience />
     </section>
   );

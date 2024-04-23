@@ -26,7 +26,7 @@ export default function Skill({ title, Icon, theme }: Omit<SkillType, "id">) {
 
   return (
     <li
-      className={`skill rounded-xl h-12 w-12 ${color} relative flex items-center justify-center`}
+      className={`skill rounded-xl h-12 w-12 ${color} text-black relative flex items-center justify-center`}
       ref={scope}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
