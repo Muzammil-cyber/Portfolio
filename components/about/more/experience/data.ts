@@ -10,10 +10,10 @@ export const Exp: ExpType[] = [{
 }, {
     id: 2,
     title: "Full Stack Web Developer",
-    date: "2023 - Present",
+    date: "2023 - 2024",
     company: "Freelancer",
     location: "Remote",
-    ifLatest: true
+    ifLatest: false
 }, {
     id: 3,
     title: "Web3 Developer",

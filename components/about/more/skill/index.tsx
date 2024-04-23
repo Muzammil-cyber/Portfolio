@@ -13,6 +13,7 @@ function useListAnimate(isHover: boolean) {
     } else {
       animate("span", { opacity: 0, scale: 0.5, rotate: 0 });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isHover]);
 
   return scope;
