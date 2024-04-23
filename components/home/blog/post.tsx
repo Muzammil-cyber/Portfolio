@@ -77,7 +77,7 @@ export default function Post({
         {selectedId == post.id && (
           <motion.div className="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center p-4 cursor-not-allowed">
             <motion.div className="max-w-xl w-full max-h-full bg-slate-200 dark:bg-slate-800 rounded-md p-4 cursor-default overflow-y-auto shadow-md">
-              <motion.h1 className="text-3xl font-extrabold dark:text-white">
+              <motion.h1 className="text-3xl font-extrabold dark:text-white mb-4">
                 {post.title}
               </motion.h1>
               {/* <motion.p className="dark:text-slate-400 text-xl ">
@@ -109,10 +109,24 @@ export default function Post({
                     );
                   },
                   p: ({ children }: any) => (
-                    <p className="dark:text-slate-200 text-xl">{children}</p>
+                    <p className="dark:text-slate-200 text-xl my-2">
+                      {children}
+                    </p>
                   ),
                   li: ({ children }: any) => (
-                    <li className="dark:text-slate-200 text-xl">{children}</li>
+                    <li className="dark:text-slate-200 text-xl my-2">
+                      {children}
+                    </li>
+                  ),
+                  h1: ({ children }: any) => (
+                    <h1 className="dark:text-slate-200 text-2xl font-bold my-4">
+                      {children}
+                    </h1>
+                  ),
+                  h2: ({ children }: any) => (
+                    <h2 className="dark:text-slate-200 text-2xl font-bold my-4">
+                      {children}
+                    </h2>
                   ),
                 }}
               />
