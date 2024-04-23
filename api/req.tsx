@@ -25,7 +25,7 @@ export async function getPorjects(): Promise<ProjectType[]> {
 }
 
 export async function getPosts(): Promise<PostType[]> {
-  noStore(); // disable caching for this page because it'll be changing frequently
+  // noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {
       posts(last: 10) {
