@@ -27,9 +27,6 @@ export const metadata: Metadata = {
   creator: "Muzammil Loya",
   publisher: "Muzammil Loya",
   category: "technology",
-  other: {
-    "google-adsense-account": "ca-pub-2154892968658633",
-  },
 };
 
 export const viewport: Viewport = {
