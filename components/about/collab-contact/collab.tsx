@@ -12,6 +12,7 @@ export default function Collab() {
         rel="author"
         href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
         className="contact-link mt-4"
+        aria-label="Email Muzammil Loya"
       >
         Get in touch &rarr;
       </Link>

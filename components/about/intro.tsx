@@ -30,6 +30,7 @@ export default function Intro({ img, base64 }: ImageType) {
             rel="author"
             href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
             className="link !text-lg"
+            aria-label="Email Muzammil Loya"
           >
             contact me!&#x1F4EC;
           </Link>

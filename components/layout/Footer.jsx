@@ -37,6 +37,7 @@ export default function Footer() {
             rel="author"
             href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
             className="link"
+            aria-label={"Email " + process.env.NEXT_PUBLIC_EMAIL}
           >
             <LuMail className="inline text-lg mr-1" />
             {process.env.NEXT_PUBLIC_EMAIL}
@@ -49,6 +50,7 @@ export default function Footer() {
               rel="external"
               key={"ref-" + index}
               href={link.link}
+              aria-label={"Link to " + link.name}
               className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-500 max-sm:w-12 max-sm:h-12"
             >
               {link.icon}

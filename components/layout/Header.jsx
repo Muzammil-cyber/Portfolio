@@ -39,6 +39,7 @@ export default function Header() {
             key={index}
             href={key.link}
             className="block px-2 py-1 text-gray-500 dark:text-white font-semibold rounded hover:text-indigo-500 dark:hover:text-indigo-500"
+            aria-label={"Link to " + key.name}
           >
             {key.name}
           </Link>

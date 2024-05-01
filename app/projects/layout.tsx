@@ -31,6 +31,7 @@ export default function Layout({ children }) {
           rel="external"
           target="_blank"
           className="secondary-btn my-8 mx-4 font-bold uppercase"
+          aria-label="More Projects At Github"
         >
           More Projects
         </Link>

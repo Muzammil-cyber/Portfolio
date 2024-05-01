@@ -38,6 +38,7 @@ export default function Project({
             target="_blank"
             rel="external"
             className="secondary-icon-btn"
+            aria-label={`Source Code for ${title}`}
           >
             Source Code
             {/* <PiGithubLogoFill className="text-2xl" /> */}
@@ -48,6 +49,7 @@ export default function Project({
               target="_blank"
               rel="external"
               className="secondary-icon-btn"
+              aria-label={`Visit Website for ${title}`}
             >
               <PiGlobe className="text-2xl" />
               Vist Website

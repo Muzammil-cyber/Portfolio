@@ -10,6 +10,7 @@ export default function Contact() {
           rel="author"
           href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
           className="contact-link"
+          aria-label="Email Muzammil Loya"
         >
           Email,
         </Link>{" "}
@@ -18,6 +19,7 @@ export default function Contact() {
           rel="external"
           href={`${process.env.NEXT_PUBLIC_LINKEDIN}`}
           className="contact-link"
+          aria-label="LinkedIn Profile of Muzammil Loya"
         >
           LinkedIn,
         </Link>
@@ -27,6 +29,7 @@ export default function Contact() {
           rel="external"
           href={`${process.env.NEXT_PUBLIC_INSTAGRAM}`}
           className="contact-link"
+          aria-label="Instagram Profile of Muzammil Loya"
         >
           Instagram
         </Link>{" "}

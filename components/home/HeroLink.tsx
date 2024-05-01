@@ -12,6 +12,7 @@ export default function HeroLink() {
       target="_blank"
       type="application/pdf"
       onClick={() => sendGTMEvent({ event: "View CV", value: "CV" })}
+      aria-label="Download CV as PDF"
     >
       <FaFilePdf className="fill-white" /> Download CV
     </Link>

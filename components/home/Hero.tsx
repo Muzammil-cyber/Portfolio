@@ -20,7 +20,12 @@ export default function HeroHome({ base64, img }: ImageType) {
         </h2>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center lg:justify-end sm:space-y-0">
           <HeroLink />
-          <Link rel="canonical" href="/about" className="secondary-btn">
+          <Link
+            rel="canonical"
+            href="/about"
+            className="secondary-btn"
+            aria-label="to about page button"
+          >
             About me
           </Link>
         </div>
