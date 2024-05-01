@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Developer 🚀 | Muzammil Loya's Skills & Experience",
+  title: "Software Engineer 🚀 | Muzammil Loya's Skills & Experience",
   description:
     "Hi, I'm Muzammil, a 19-year-old web developer skilled in HTML, CSS, JavaScript, React, Node.js, and more. Let's connect!",
   keywords: [
@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     "web developer",
     "skills",
     "experience",
+    "react native",
+    "node.js",
+    "full stack",
+    "software engineer",
+    "software developer",
+    "mobile developer",
   ],
 };
 

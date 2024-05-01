@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import HeroLink from "./HeroLink";
+import AnimatedText from "./Hero/AnimateText";
 
 export default function HeroHome({ base64, img }: ImageType) {
   return (
@@ -11,7 +12,7 @@ export default function HeroHome({ base64, img }: ImageType) {
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-snug  md:text-5xl lg:text-6xl ">
           Hi, I&apos;m <span className="text-indigo-700">Muzammil Loya</span>.
           <br />
-          Web Developer
+          Software Engineer
         </h1>
         <h2 className="mb-8 font-bold text-lg  text-slate-500 lg:text-xl   dark:text-slate-400">
           Executive Director of Web Devlopment @ GDSC <br /> Freelancer <br />{" "}
@@ -27,7 +28,7 @@ export default function HeroHome({ base64, img }: ImageType) {
       <div className="lg:flex hidden w-1/2  items-center justify-center">
         <Image
           src={img.src}
-          alt="Muzammil's profile picture"
+          alt="Muzammil's profile picture without background"
           width={img.width}
           height={img.height}
           blurDataURL={base64}

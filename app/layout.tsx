@@ -9,10 +9,10 @@ import DarkMode from "@/context/DarkMode";
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: "Full-Stack Web Developer | Muzammil Loya's Portfolio",
+  title: "Software Engineer | Muzammil Loya's Portfolio",
 
   description:
-    "I'm Muzammil Loya, a full-stack web developer passionate about clean code & UX. Check out my portfolio and recent blog posts on JavaScript & Git!",
+    "I'm Muzammil Loya, a software engineer passionate about clean code & UX. Check out my portfolio and recent blog posts on recent techs!",
   keywords: [
     "Web Developer",
     "Full stack Developer",
@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     "Decentralized Web",
     "blog",
     "blogger",
+    "tech blog",
+    "software engineer",
+    "software developer",
+    "mobile developer",
+    "react native developer",
+    "react developer",
+    "nextjs developer",
+    "node developer",
   ],
   authors: [{ name: "Muzammil Loya" }],
   creator: "Muzammil Loya",
