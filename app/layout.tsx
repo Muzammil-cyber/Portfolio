@@ -9,7 +9,7 @@ import DarkMode from "@/context/DarkMode";
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: "Software Engineer | Muzammil Loya's Portfolio",
+  title: "Muzammil Loya's Portfolio: Software Engineer",
 
   description:
     "I'm Muzammil Loya, a software engineer passionate about clean code & UX. Check out my portfolio and recent blog posts on recent techs!",

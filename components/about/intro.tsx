@@ -1,6 +1,7 @@
 import { ImageType } from "@/type/types";
 import Image from "next/image";
 import Link from "next/link";
+import age from "./intro/age";
 
 export default function Intro({ img, base64 }: ImageType) {
   return (
@@ -8,19 +9,20 @@ export default function Intro({ img, base64 }: ImageType) {
       <article className="sm:w-1/2 text-left space-y-4  text-lg mx-auto">
         <h2 className="text-3xl font-bold ">Hi, I&apos;m Muzammil Loya 👋</h2>{" "}
         <p className="text-slate-800 dark:text-slate-400">
-          I&apos;m a 19 year old{" "}
-          <span className="font-bold text-inherit">Web developer</span> based in
-          Pakistan. I&apos;m passionate about building modern web apps that
-          helps others (including me) to improve their lives. I started my web
-          development adventure at the age of 18 and now I work for varoius
-          companies around the world. &#x1F30D;
+          I&apos;m a {age()}-year-old{" "}
+          <span className="text-bold">software engineer</span> with expertise in
+          React Native, ReactJS, and Node.js. I&apos;m passionate about building
+          robust and scalable software solutions that enhance user experience.
         </p>
         <p className="text-slate-600 dark:text-slate-400">
-          I&apos;m working as a freelancer, so if you want to hire me, check the
-          section below. Currently, I&apos;m looking for a job to enhance my
-          skills and take on newer challanges. I&apos;m always open to
-          innovative ideas and solutions, so I think we&apos;re gonna get along.
-          &#x1F60E;
+          My software development journey began at the age of 19, and I&apos;ve
+          since gained valuable experience working with diverse companies
+          worldwide. 🌍
+        </p>
+        <p className="text-slate-600 dark:text-slate-400">
+          Currently, I&apos;m seeking a challenging position to broaden my
+          skillset and tackle new technical problems. I thrive in innovative
+          environments and believe in collaborative problem-solving. &#x1F60E;
         </p>
         <p className="text-slate-600 dark:text-slate-400">
           Sounds interesting? Feel free to{" "}
@@ -34,7 +36,7 @@ export default function Intro({ img, base64 }: ImageType) {
         </p>
       </article>
       <Image
-        className="rounded-full sm:w-1/2 sm:h-auto h-[400px] w-[400px] image-back"
+        className="rounded-full w-1/2 h-auto  max-md:mt-4 image-back "
         src={img.src}
         alt="It's a me, Muzammil"
         width={img.width}

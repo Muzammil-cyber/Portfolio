@@ -2,7 +2,7 @@ import { FaCss3, FaDocker, FaGitAlt, FaHtml5, FaNode, FaReact, FaStripe } from "
 import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
 import { SiTypescript, SiJavascript, SiMongodb, SiTailwindcss, SiChakraui, SiPostgresql, SiFramer, SiFirebase, SiPayloadcms } from "react-icons/si";
 import { SkillType } from "@/type/types";
-
+import AgileIcon from "@/components/icons/AgileIcon";
 export const SkillSet: SkillType[] = [
     {
         id: 1,
@@ -123,6 +123,12 @@ export const SkillSet: SkillType[] = [
         title: 'Docker',
         Icon: FaDocker,
         theme: "bg-blue-500 !text-3xl"
+    },
+    {
+        id: 16,
+        title: 'Agile',
+        Icon: AgileIcon,
+        theme: 'bg-gray-100'
     }
 
 ];
