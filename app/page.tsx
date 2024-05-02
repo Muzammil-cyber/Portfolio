@@ -1,5 +1,5 @@
-// import { getPosts, hygraph } from "@/api/req";
-import { hygraph } from "@/api/header";
+"use server";
+
 import { getPosts } from "@/api/req";
 import HeroHome from "@/components/home/Hero";
 import Blog from "@/components/home/blog";
@@ -10,8 +10,7 @@ import { getImageLocal } from "@/utils/image";
 
 import { Suspense } from "react";
 
-export const revalidate = 5; // revalidate the data at most every hour
-export const runtime = "edge";
+// export const revalidate = 5; // revalidate the data at most every hour
 
 export default async function Home() {
   const { base64, img } = await getImageLocal("/profile-removebg.png");
