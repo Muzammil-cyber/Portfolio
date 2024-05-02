@@ -87,6 +87,8 @@ export default function Post({
               <RichText
                 content={post.desc}
                 renderers={{
+                  bold: ({ children }: any) => <strong>{children}</strong>,
+                  italic: ({ children }: any) => <em>{children}</em>,
                   a: ({ children, openInNewTab, href, rel, ...rest }) => {
                     if (href.match(/^https?:\/\/|^\/\//i)) {
                       return (
@@ -127,6 +129,16 @@ export default function Post({
                     <h2 className="dark:text-slate-200 text-2xl font-bold my-4">
                       {children}
                     </h2>
+                  ),
+                  code_block: ({ children }: any) => (
+                    <pre className="dark:text-slate-200 bg-slate-300 dark:bg-slate-900 text-lg my-4 p-1 rounded-md overflow-x-auto font-mono">
+                      {children}
+                    </pre>
+                  ),
+                  code: ({ children }: any) => (
+                    <code className="dark:text-slate-200 text-lg bg-slate-300 dark:bg-slate-900 p-1 rounded-md font-mono">
+                      {children}
+                    </code>
                   ),
                 }}
               />
