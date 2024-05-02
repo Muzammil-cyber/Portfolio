@@ -11,6 +11,7 @@ import { getImageLocal } from "@/utils/image";
 import { Suspense } from "react";
 
 export const revalidate = 5; // revalidate the data at most every hour
+export const runtime = "edge";
 
 export default async function Home() {
   const { base64, img } = await getImageLocal("/profile-removebg.png");
