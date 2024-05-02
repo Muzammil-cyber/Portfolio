@@ -1,5 +1,3 @@
-"use server";
-
 import { getPosts } from "@/api/req";
 import HeroHome from "@/components/home/Hero";
 import Blog from "@/components/home/blog";
@@ -7,10 +5,11 @@ import Blog from "@/components/home/blog";
 import LoadingBlog from "@/components/home/blog/loading";
 import { PostType } from "@/type/types";
 import { getImageLocal } from "@/utils/image";
+import { revalidatePath, revalidateTag } from "next/cache";
 
 import { Suspense } from "react";
 
-// export const revalidate = 5; // revalidate the data at most every hour
+export const revalidate = 3600; // revalidate the data at most every hour
 
 export default async function Home() {
   const { base64, img } = await getImageLocal("/profile-removebg.png");
