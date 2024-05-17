@@ -9,15 +9,15 @@ import { revalidatePath, revalidateTag } from "next/cache";
 
 import { Suspense } from "react";
 
-export const revalidate = 3600; // revalidate the data at most every hour
+// export const revalidate = 3600; // revalidate the data at most every hour
 
 export default async function Home() {
-  const { base64, img } = await getImageLocal("/profile-removebg.png");
+  // const { base64, img } = await getImageLocal("/profile-removebg.png");
   const posts: PostType[] = await getPosts();
 
   return (
     <main className="flex-auto">
-      <HeroHome base64={base64} img={img} />
+      <HeroHome />
       <hr className="border-t-4 dark:border-slate-800" />
       <Suspense fallback={<LoadingBlog />}>
         <Blog items={posts} />
