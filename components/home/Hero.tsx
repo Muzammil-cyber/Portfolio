@@ -1,12 +1,11 @@
 import { ImageType } from "@/type/types";
 import Image from "next/image";
 import Link from "next/link";
-import me from "@/public/profile-removebg.png";
 
 import HeroLink from "./HeroLink";
+import AnimatedText from "./Hero/AnimateText";
 
-export default function HeroHome() {
-  // { img }: Omit<ImageType, "base64">
+export default function HeroHome({ base64, img }: ImageType) {
   return (
     <section className="bg-white dark:bg-slate-900 lg:flex ">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:text-right text-center lg:py-16 lg:w-1/2">
@@ -33,11 +32,11 @@ export default function HeroHome() {
       </div>
       <div className="lg:flex hidden w-1/2  items-center justify-center">
         <Image
-          src={me}
+          src={img.src}
           alt="Muzammil's profile picture without background"
-          // width={img.width}
-          // height={img.height}
-          // blurDataURL={base64}
+          width={img.width}
+          height={img.height}
+          blurDataURL={base64}
           placeholder="blur"
           className="rounded-full w-64 h-auto absolute z-30"
         />{" "}
