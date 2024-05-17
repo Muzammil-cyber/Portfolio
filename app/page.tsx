@@ -9,7 +9,7 @@ import { PostType } from "@/type/types";
 
 import { Suspense } from "react";
 
-export const revalidate = 1800; // revalidate the data at most every half hour
+// export const revalidate = 1800; // revalidate the data at most every half hour
 
 export default async function Home() {
   // const { base64, img } = await getImageLocal("/profile-removebg.png");
