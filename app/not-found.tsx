@@ -23,7 +23,9 @@ export default async function NotFound() {
       <div className="w-1 h-40 bg-slate-200 dark:bg-slate-800 mx-10 hidden sm:block"></div>
 
       <div className="text-left space-y-4">
-        <h1 className="text-4xl font-bold uppercase">404 not found</h1>
+        <h1 className="text-4xl font-bold uppercase">
+          404 <span className="max-sm:hidden">not found</span>
+        </h1>
         <h2 className="text-lg">
           <AnimatedText
             text=" My bad, this page wandered off the map! Let's chart a new course
