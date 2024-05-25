@@ -1,0 +1,76 @@
+ query getProjects($first:Int,$after:String)
+ {
+   projectsConnection(first:$first,after:$after) {
+     edges {
+       cursor
+       node {
+         id
+         title
+       }
+     }
+     pageInfo {
+       hasNextPage
+       hasPreviousPage
+       startCursor
+       endCursor
+       pageSize
+     }
+   }
+ }
+
+
+ {
+  "data": {
+    "projectsConnection": {
+      "edges": [
+        {
+          "cursor": "clrxaftal6n9a0bk3vpnmvisv",
+          "node": {
+            "id": "clrxaftal6n9a0bk3vpnmvisv",
+            "title": "VBS - BAT"
+          }
+        },
+        {
+          "cursor": "clrxaixe56mgn0alc8hk3whsg",
+          "node": {
+            "id": "clrxaixe56mgn0alc8hk3whsg",
+            "title": "TinDog"
+          }
+        },
+        {
+          "cursor": "clrxamvmk6lb10ck7i37ck885",
+          "node": {
+            "id": "clrxamvmk6lb10ck7i37ck885",
+            "title": "Keeper App"
+          }
+        },
+        {
+          "cursor": "clrxaq9jk6ldo0ck7izyzixq4",
+          "node": {
+            "id": "clrxaq9jk6ldo0ck7izyzixq4",
+            "title": "Nextjs-Demo"
+          }
+        },
+        {
+          "cursor": "clrxau5vy6lk10bldwsvuqi17",
+          "node": {
+            "id": "clrxau5vy6lk10bldwsvuqi17",
+            "title": "DBank"
+          }
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": true,
+        "hasPreviousPage": true,
+        "startCursor": "clrxaftal6n9a0bk3vpnmvisv",
+        "endCursor": "clrxau5vy6lk10bldwsvuqi17",
+        "pageSize": 5
+      }
+    }
+  }
+}
+
+{
+  "first":5,
+ 	"after": "clrnbdfwy3zi80ak6aax8dzn8"
+}

@@ -24,7 +24,7 @@
    @apply inline-flex justify-center items-center gap-2 py-1 px-2  font-medium text-center text-slate-900 rounded-lg border border-slate-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 dark:text-white dark:border-slate-700 dark:hover:bg-slate-700 dark:focus:ring-slate-800
   }
   .secondary-btn {
-    @apply inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center  rounded-lg border border-slate-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100  dark:border-slate-700 dark:hover:bg-slate-700 dark:focus:ring-slate-800
+    @apply inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center  rounded-lg border border-slate-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100  dark:border-slate-700 dark:hover:bg-slate-700 dark:focus:ring-slate-800 
   }
   
   .spinner {

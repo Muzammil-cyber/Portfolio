@@ -2,6 +2,13 @@ import { RichTextContent } from "@graphcms/rich-text-types";
 import { IconType } from "react-icons";
 
 type ID = string | number
+interface PageInfoType {
+    hasNextPage: boolean,
+    hasPreviousPage: boolean,
+    startCursor: string,
+    endCursor: string,
+    pageSize: number
+}
 interface PostType {
     id: ID,
     title: string,
@@ -42,6 +49,15 @@ interface ProjectType {
     gitUrl: string,
     webUrl?: string,
 }
+interface ProjectEdgeType {
+    cursor: string,
+    node: ProjectType
+}
+
+interface ProjectConnectionType {
+    edges: ProjectEdgeType[],
+    pageInfo: PageInfoType
+}
 
 interface ImageType {
     img: {
@@ -53,4 +69,4 @@ interface ImageType {
 
 }
 
-export type { PostType, SkillType, ExpType, FactType, ProjectType, ImageType }
+export type { PostType, SkillType, ExpType, FactType, ProjectType, ImageType, ProjectEdgeType, PageInfoType, ProjectConnectionType }

@@ -1,28 +1,50 @@
 "use server";
 import { unstable_noStore as noStore } from "next/cache";
 import { gql } from "graphql-request";
-import { PostType, ProjectType } from "@/type/types";
+import { PostType, ProjectConnectionType, ProjectType } from "@/type/types";
 import { hygraph } from "./header";
 // import { cache } from "react";
 
-export async function getPorjects(): Promise<ProjectType[]> {
+export async function getPorjects(
+  cursor: {
+    first: number;
+    after?: string;
+  } = { first: 5 }
+): Promise<ProjectConnectionType> {
   noStore();
   const QUERY = gql`
-    {
-      projects(last: 10) {
-        id
-        desc
-        gitUrl
-        tech
-        title
-        webUrl
+    query getProjects($first: Int, $after: String) {
+      projectsConnection(
+        first: $first
+        after: $after
+        orderBy: createdAt_DESC
+      ) {
+        edges {
+          cursor
+          node {
+            id
+            desc
+            gitUrl
+            tech
+            title
+            webUrl
+          }
+        }
+        pageInfo {
+          hasNextPage
+          hasPreviousPage
+          startCursor
+          endCursor
+          pageSize
+        }
       }
     }
   `;
-  const { projects }: { projects: ProjectType[] } = await hygraph.request(
-    QUERY
-  );
-  return projects;
+  const { projectsConnection }: { projectsConnection: ProjectConnectionType } =
+    await hygraph.request(QUERY, cursor);
+  console.log(projectsConnection);
+
+  return projectsConnection;
 }
 
 export const getPosts = async (): Promise<PostType[]> => {
