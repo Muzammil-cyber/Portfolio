@@ -42,6 +42,14 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@MuzammilLoya",
+    title: "Software Engineer 🚀 | Muzammil Loya's Skills & Experience",
+    description:
+      "Hi, I'm Muzammil, a 20-year-old software Enginner skilled in HTML, CSS, JavaScript, React, Node.js, and more. Let's connect!",
+    images: ["https://muzammil-loya.vercel.app/profile-Cropped.jpg"],
+  },
 };
 
 export default function Layout({ children }) {

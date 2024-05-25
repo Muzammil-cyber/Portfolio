@@ -34,6 +34,14 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@MuzammilLoya",
+    title: "Software Engineer | Muzammil Loya's Projects",
+    description:
+      "Check out my software engineering portfolio showcasing projects like an NFT marketplace built with Next.js and MongoDB, a dog dating app, and more! I use technologies like HTML, CSS, JavaScript, VBscript, React native, and Node.js.",
+    images: ["https://muzammil-loya.vercel.app/profile-Cropped.jpg"],
+  },
 };
 
 export default function Layout({ children }) {
