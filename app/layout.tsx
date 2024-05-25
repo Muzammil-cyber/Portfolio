@@ -1,8 +1,7 @@
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+
 
 import { GoogleTagManager } from "@next/third-parties/google";
 import DarkMode from "@/context/DarkMode";
@@ -35,6 +34,23 @@ export const metadata: Metadata = {
   creator: "Muzammil Loya",
   publisher: "Muzammil Loya",
   category: "technology",
+  openGraph: {
+    title: "Muzammil Loya's Portfolio: Software Engineer",
+    description:
+      "I'm Muzammil Loya, a software engineer passionate about clean code & UX. Check out my portfolio and recent blog posts on recent techs!",
+    url: "https://muzammil-loya.vercel.app/",
+    type: "website",
+    siteName: "Muzammil Loya's Portfolio",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://muzammil-loya.vercel.app/profile-Cropped.jpg",
+        width: 800,
+        height: 600,
+        alt: "Muzammil Loya's Portfolio",
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
@@ -49,8 +65,6 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-        <SpeedInsights />
-        <Analytics />
       </DarkMode>
       <GoogleTagManager gtmId={process.env.GTM} />
       {/* </body> */}

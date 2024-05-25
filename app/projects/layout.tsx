@@ -17,6 +17,23 @@ export const metadata: Metadata = {
     "Motoko",
     "VBscript",
   ],
+  openGraph: {
+    title: "Software Engineer | Muzammil Loya's Projects",
+    description:
+      "Check out my software engineering portfolio showcasing projects like an NFT marketplace built with Next.js and MongoDB, a dog dating app, and more! I use technologies like HTML, CSS, JavaScript, VBscript, React native, and Node.js.",
+    url: "https://muzammil-loya.vercel.app/projects",
+    type: "website",
+    siteName: "Muzammil Loya's Portfolio",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://muzammil-loya.vercel.app/profile-Cropped.jpg",
+        width: 800,
+        height: 600,
+        alt: "Muzammil Loya's Portfolio",
+      },
+    ],
+  },
 };
 
 export default function Layout({ children }) {
