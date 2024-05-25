@@ -51,25 +51,28 @@ export const getPosts = async (): Promise<PostType[]> => {
   noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {
-      posts(last: 10) {
-        desc {
-          raw
-        }
+      posts(last: 1) {
         id
         title
         createdAt
         topic
+        coverImage {
+          id
+          url
+          width
+          height
+        }
       }
     }
   `;
   const res: any = await hygraph.request(QUERY);
 
   const posts: PostType[] = res.posts.map((post: any) => ({
-    desc: post.desc.raw,
     id: post.id,
     title: post.title,
     createdAt: post.createdAt,
     topic: post.topic,
+    coverImage: post.coverImage,
   }));
   return posts;
 };

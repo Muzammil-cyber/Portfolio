@@ -1,6 +1,7 @@
 import { getPosts } from "@/api/req";
 import HeroHome from "@/components/home/Hero";
 import Blog from "@/components/home/blog";
+import LatestBlog from "@/components/home/blog/LatestBlog";
 
 import LoadingBlog from "@/components/home/blog/loading";
 import { PostType } from "@/type/types";
@@ -20,7 +21,8 @@ export default async function Home() {
       <HeroHome />
       <hr className="border-t-4 dark:border-slate-800" />
       <Suspense fallback={<LoadingBlog />}>
-        <Blog items={posts} />
+        {/* <Blog items={posts} /> */}
+        <LatestBlog post={posts[0]} />
       </Suspense>
     </main>
   );
