@@ -50,8 +50,7 @@ export default function Projects({
             });
           });
         }}
-        // disabled={loading}
-        disabled
+        disabled={loading}
       >
         {loading ? "Loading..." : "More Projects"}
       </button>
