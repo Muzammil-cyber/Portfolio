@@ -9,7 +9,7 @@ export default function Logo() {
         alt="Muzammil Loya's Portfolio logo"
         width={100}
         height={100}
-        priority
+        priority={false}
       />
       <Image
         className="h-8 w-auto dark:hidden max-sm:hidden"
@@ -17,7 +17,7 @@ export default function Logo() {
         alt="Muzammil Loya's Portfolio logo"
         width={100}
         height={100}
-        priority
+        priority={false}
       />
       <Image
         className="h-8 w-auto sm:hidden min-w-[2rem]"

@@ -70,8 +70,8 @@ const LatestBlog = ({ post }: { post: PostType }) => {
         </Link>
       </main>
       <aside className="lg:w-1/3 max-lg:max-w-3xl">
-        <h4 className="text-3xl font-bold mb-9">More</h4>
-        <ul className="flex lg:flex-col h-5/6 gap-4 w-full">
+        <h3 className="text-3xl font-bold mb-9">More</h3>
+        <div className="flex lg:flex-col h-5/6 gap-4 w-full">
           <Link
             href={`/blogs`}
             className="relative flex h-1/2 items-center justify-center overflow-hidden rounded-lg group parent max-lg:w-1/2"
@@ -83,9 +83,9 @@ const LatestBlog = ({ post }: { post: PostType }) => {
               alt="To project page"
               className="w-full h-auto object-contain rounded-lg"
             />
-            <h5 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white bg-slate-800 px-4 py-2 rounded-lg sm:group-hover:text-2xl">
+            <h4 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white bg-slate-800 px-4 py-2 rounded-lg sm:group-hover:text-2xl">
               More Blog Posts
-            </h5>
+            </h4>
           </Link>
 
           <Link
@@ -99,11 +99,11 @@ const LatestBlog = ({ post }: { post: PostType }) => {
               alt="To project page"
               className="w-full h-auto object-contain rounded-lg"
             />
-            <h5 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white sm:group-hover:text-2xl">
+            <h4 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white sm:group-hover:text-2xl">
               My projects
-            </h5>
+            </h4>
           </Link>
-        </ul>
+        </div>
       </aside>
     </section>
   );

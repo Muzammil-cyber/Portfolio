@@ -7,6 +7,13 @@ import { usePathname } from "next/navigation";
 import ThemeToggler from "../theme/ThemeToggler";
 import { Suspense } from "react";
 import Logo from "./logo";
+import dynamic from "next/dynamic";
+
+const DynamicLogo = dynamic(() => import("./logo"), {
+  loading: () => (
+    <div className="h-8 w-8 rounded-full animate-pulse bg-slate-500 dark:bg-slate-200"></div>
+  ),
+});
 
 export default function Header() {
   const links = [
@@ -28,9 +35,16 @@ export default function Header() {
   return (
     <header className="bg-slate-100 dark:bg-slate-800 flex justify-between  px-4 py-1 sm:py-3 items-center flex-1">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
-        <Suspense>
+        {/* <Suspense
+          fallback={
+            <div>
+              <div className="h-8 w-8 rounded-full animate-pulse bg-slate-500 dark:bg-slate-200"></div>
+            </div>
+          }
+        >
           <Logo />
-        </Suspense>
+        </Suspense> */}
+        <DynamicLogo />
       </div>
       <nav className="flex p-0 sm:mr-16">
         {links.map((key, index) => (
