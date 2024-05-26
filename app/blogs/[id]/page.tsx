@@ -1,6 +1,9 @@
 import { getPostById } from "@/api/req";
 import WholeBlog from "@/components/home/blog/WholeBlog";
+
 import { notFound } from "next/navigation";
+
+
 
 export default async function Page({ params }: { params: { id: string } }) {
   const { id } = params;

@@ -7,10 +7,9 @@ import {
   PostType,
   PostWithDescriptionType,
   ProjectConnectionType,
-  ProjectType,
 } from "@/type/types";
 import { hygraph } from "./header";
-// import { cache } from "react";
+import { cache } from "react";
 
 export async function getPorjects(
   cursor: {
@@ -53,7 +52,7 @@ export async function getPorjects(
   return projectsConnection;
 }
 
-export const getLatestPost = async (): Promise<PostType> => {
+export const getLatestPost = cache(async (): Promise<PostType> => {
   noStore(); // disable caching for this page because it'll be changing frequently
   const QUERY = gql`
     {
@@ -81,7 +80,7 @@ export const getLatestPost = async (): Promise<PostType> => {
     coverImage: post.coverImage,
   }));
   return posts[0];
-};
+});
 
 export async function getPosts(
   cursor: {
@@ -124,6 +123,7 @@ export async function getPosts(
 }
 
 export async function getPostsIds(): Promise<{ id: ID; updatedAt: Date }[]> {
+  noStore();
   const QUERY = gql`
     {
       posts(last: 20) {
@@ -137,7 +137,8 @@ export async function getPostsIds(): Promise<{ id: ID; updatedAt: Date }[]> {
   return posts;
 }
 
-export async function getPostById(id: ID): Promise<PostWithDescriptionType> {
+export const getPostById = async (id: ID): Promise<PostWithDescriptionType> => {
+  noStore();
   const QUERY = gql`
     query getPostById($id: ID!) {
       post(where: { id: $id }) {
@@ -162,5 +163,6 @@ export async function getPostById(id: ID): Promise<PostWithDescriptionType> {
     { id }
   );
   return post;
-}
+};
+
 // This code exports two functions, `getPosts` and `getProjects`, which fetch data from a GraphQL API and return it as arrays of custom data types `PostType` and `ProjectType` respectively. The `noStore` function is used to disable caching for this page because the data is expected to change frequently.

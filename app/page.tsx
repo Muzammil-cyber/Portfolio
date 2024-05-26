@@ -9,10 +9,9 @@ import { PostType } from "@/type/types";
 
 import { Suspense } from "react";
 
-// export const revalidate = 3600; // revalidate the data at most every hour
+export const revalidate = 3600; // revalidate the data at most every hour
 
 export default async function Home() {
-  // const { base64, img } = await getImageLocal("/profile-removebg.png");
   const post: PostType = await getLatestPost();
 
   return (
@@ -20,7 +19,6 @@ export default async function Home() {
       <HeroHome />
       <hr className="border-t-4 dark:border-slate-800" />
       <Suspense fallback={<LoadingBlog />}>
-        {/* <Blog items={posts} /> */}
         <LatestBlog post={post} />
       </Suspense>
     </main>
