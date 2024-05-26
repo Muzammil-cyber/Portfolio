@@ -37,13 +37,15 @@ function WholeBlog({ post }: { post: PostWithDescriptionType }) {
         </span>{" "}
         • {dateCreated()}
       </p>
-      <Image
-        src={post.coverImage.url}
-        alt={post.title}
-        width={post.coverImage.width}
-        height={post.coverImage.height}
-        className="w-full md:h-96 object-cover rounded-lg my-4 aspect-video"
-      />
+      {post.coverImage && (
+        <Image
+          src={post.coverImage.url}
+          alt={post.title}
+          width={post.coverImage.width}
+          height={post.coverImage.height}
+          className="w-full md:h-96 object-cover rounded-lg my-4 aspect-video"
+        />
+      )}
 
       <section className="text-left space-y-4">
         <RawToHtml raw={post.desc.raw} />
