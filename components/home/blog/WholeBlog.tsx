@@ -31,7 +31,7 @@ function WholeBlog({ post }: { post: PostWithDescriptionType }) {
   return (
     <>
       <h1 className="text-4xl font-bold mb-2">{post.title}</h1>
-      <p className="text-sm dark:text-slate-100">
+      <p className="text-sm dark:text-slate-100 mb-2">
         <span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">
           {post.topic}
         </span>{" "}
@@ -43,7 +43,7 @@ function WholeBlog({ post }: { post: PostWithDescriptionType }) {
           alt={post.title}
           width={post.coverImage.width}
           height={post.coverImage.height}
-          className="w-full md:h-96 object-cover rounded-lg my-4 aspect-video"
+          className="w-full md:h-96 object-cover rounded-lg mb-4 aspect-video"
         />
       )}
 
