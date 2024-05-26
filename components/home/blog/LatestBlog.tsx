@@ -37,7 +37,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
         <Link href={`blogs/${post.id}`}>
           <div className="w-full h-auto aspect-video relative">
             <div className="absolute bottom-0 left-0 m-4">
-              <p className="sm:texl-2xl text-xs  font-bold bg-white dark:bg-slate-800 py-2 px-4 rounded-t-lg uppercase">
+              <p className="sm:texl-2xl text-xs  font-bold bg-white dark:bg-slate-800 py-2 px-4 rounded-t-lg uppercase inline">
                 {/* Span for purple dot */}
                 <span className="bg-indigo-700 w-2 h-2 rounded-full inline-block mr-2"></span>
                 {post.topic}
