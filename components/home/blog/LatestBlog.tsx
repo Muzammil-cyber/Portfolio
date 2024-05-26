@@ -37,25 +37,35 @@ const LatestBlog = ({ post }: { post: PostType }) => {
         <Link href={`blogs/${post.id}`}>
           <div className="w-full h-auto aspect-video relative">
             <div className="absolute bottom-0 left-0 m-4">
-              <p className="sm:texl-2xl text-xs  font-bold bg-white dark:bg-slate-800 py-2 px-4 rounded-t-lg inline-block uppercase">
+              <p className="sm:texl-2xl text-xs  font-bold bg-white dark:bg-slate-800 py-2 px-4 rounded-t-lg uppercase">
                 {/* Span for purple dot */}
                 <span className="bg-indigo-700 w-2 h-2 rounded-full inline-block mr-2"></span>
                 {post.topic}
               </p>
-              <h2 className="sm:text-4xl font-extrabold bg-white dark:bg-slate-800 p-2 sm:p-4 rounded-b-lg rounded-tr-lg inline-block">
+              <h2 className="sm:text-4xl font-extrabold bg-white dark:bg-slate-800 p-2 sm:p-4 rounded-b-lg rounded-tr-lg">
                 {post.title}
               </h2>
             </div>
             <div className="absolute top-4 right-4 rounded-full bg-white dark:bg-slate-800 px-2">
               <p className="max-sm:text-xs p-2 font-bold">{dateCreated()}</p>
             </div>
-            <Image
-              className="w-full h-full object-cover rounded-lg"
-              src={post.coverImage.url}
-              alt={post.title}
-              width={post.coverImage.width}
-              height={post.coverImage.height}
-            />
+            {post.coverImage ? (
+              <Image
+                className="w-full h-full object-cover rounded-lg"
+                src={post.coverImage.url}
+                alt={post.title}
+                width={post.coverImage.width}
+                height={post.coverImage.height}
+              />
+            ) : (
+              <Image
+                className="w-full h-full object-cover rounded-lg"
+                src={"/DefualtImage.jpg"}
+                alt={"Defualt Image"}
+                width={256}
+                height={81}
+              />
+            )}
           </div>
         </Link>
       </main>
