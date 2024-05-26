@@ -21,7 +21,33 @@ export interface PostType {
     };
 }
 
+export interface PostWithDescriptionType {
+    id: ID;
+    title: string;
+    topic: string;
+    createdAt: string;
+    coverImage?: {
+        id: ID;
+        url: string;
+        width: number;
+        height: number;
+    };
+    desc: {
+        raw: PostDescriptionType
+    };
+
+}
+
 export type PostDescriptionType = RichTextContent
+export interface PostEdgeType {
+    cursor: string;
+    node: PostType;
+}
+export interface PostConnectionType {
+    edges: PostEdgeType[];
+    pageInfo: PageInfoType;
+}
+
 export interface SkillType {
     id: ID;
     title: string;

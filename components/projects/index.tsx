@@ -43,7 +43,7 @@ export default function Projects({
             }).then((data) => {
               setProjectState([...projectState, ...data.edges]);
               setLoading(false);
-              console.log(data.pageInfo.endCursor);
+
               setEndCursor(
                 data.pageInfo.hasNextPage && data.pageInfo.endCursor
               );
