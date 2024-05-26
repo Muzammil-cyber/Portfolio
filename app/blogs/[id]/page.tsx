@@ -1,5 +1,6 @@
 import { getPostById } from "@/api/req";
 import WholeBlog from "@/components/home/blog/WholeBlog";
+import { getPlainText } from "@/utils/getPlainText";
 import { Metadata, ResolvingMetadata } from "next";
 
 import { notFound } from "next/navigation";
@@ -23,10 +24,13 @@ export async function generateMetadata(
     openGraph: { images },
     twitter: { images: twitterImages },
   } = await parent;
-  const description = (post.title + " " + post.desc.raw.toString()).substring(
-    0,
-    130
-  );
+  const description =
+    (
+      post.title +
+      " " +
+      // @ts-expect-error
+      getPlainText(post.desc.raw)
+    ).substring(0, 120) + "...";
 
   return {
     title: post.title,
@@ -44,7 +48,7 @@ export async function generateMetadata(
       locale: "en_US",
       images: [
         {
-          url: post.coverImage.url,
+          url: post?.coverImage?.url,
           width: 800,
           height: 600,
           alt: post.title,
@@ -57,7 +61,7 @@ export async function generateMetadata(
       creator: "@MuzammilLoya",
       title: post.title,
       description,
-      images: [post.coverImage.url, ...twitterImages],
+      images: [post.coverImage?.url, ...twitterImages],
     },
   };
 }

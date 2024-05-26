@@ -38,7 +38,6 @@ export default function Post({ post }: { post: PostType }) {
       className={`w-full ${post.coverImage && `row-span-2`}`}
     >
       <motion.div
-        layoutId={post.id.toString()}
         className="sm:max-w-lg p-4 cursor-pointer max-sm:w-full"
         initial={{ opacity: 0, y: -5 }}
         whileInView={{ opacity: 1, y: 0 }}
