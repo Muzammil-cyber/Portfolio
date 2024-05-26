@@ -123,16 +123,18 @@ export async function getPosts(
   return postsConnection;
 }
 
-export async function getPostsIds() {
+export async function getPostsIds(): Promise<{ id: ID; updatedAt: Date }[]> {
   const QUERY = gql`
     {
-      posts(last: 10) {
+      posts(last: 20) {
         id
+        updatedAt
       }
     }
   `;
-  const res: any = await hygraph.request(QUERY);
-  return res.posts;
+  const { posts }: { posts: [{ id: ID; updatedAt: Date }] } =
+    await hygraph.request(QUERY);
+  return posts;
 }
 
 export async function getPostById(id: ID): Promise<PostWithDescriptionType> {
