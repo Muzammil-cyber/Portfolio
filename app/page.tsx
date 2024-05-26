@@ -1,12 +1,11 @@
 import { getLatestPost } from "@/api/req";
 import HeroHome from "@/components/home/Hero";
-import Blog from "@/components/home/blog";
+
 import LatestBlog from "@/components/home/blog/LatestBlog";
 
 import LoadingBlog from "@/components/home/blog/loading";
 import { PostType } from "@/type/types";
-import { getImageLocal } from "@/utils/image";
-import { revalidatePath, revalidateTag } from "next/cache";
+
 
 import { Suspense } from "react";
 
