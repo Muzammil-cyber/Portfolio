@@ -48,7 +48,10 @@ const RawToHtml = ({ raw }) => {
           </h2>
         ),
         code_block: ({ children }: any) => (
-          <pre className=" bg-slate-100 dark:bg-slate-500 text-md my-4 p-1 rounded overflow-x-auto font-mono leading-3">
+          <pre
+            className=" bg-slate-100 dark:bg-slate-500 text-md my-4 p-2 rounded font-mono leading-3 "
+            style={{ overflowX: "auto" }}
+          >
             {children}
           </pre>
         ),
