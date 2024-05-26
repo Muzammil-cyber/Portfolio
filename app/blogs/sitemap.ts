@@ -3,10 +3,6 @@ import { MetadataRoute } from "next"
 
 const BASE_URL = "https://muzammilloya-portfolio.vercel.app"
 
-export async function generateSitemaps() {
-    // Fetch the total number of products and calculate the number of sitemaps needed
-    return await getPostsIds()
-}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Google's limit is 50,000 URLs per sitemap
