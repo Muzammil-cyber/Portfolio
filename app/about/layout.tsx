@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "https://muzammil-loya.vercel.app/profile-Cropped.jpg",
         width: 800,
         height: 600,
-        alt: "Muzammil Loya's Portfolio",
+        alt: "Muzammil Loya's Portfolio Profile",
       },
     ],
   },

@@ -38,7 +38,7 @@ export async function generateMetadata(
     creator,
     publisher,
     authors,
-    keywords: [post.topic],
+    keywords: [post.topic, ...post.title.split(" ")],
     description,
     openGraph: {
       title: post.title,
@@ -47,7 +47,7 @@ export async function generateMetadata(
       type: "article",
       locale: "en_US",
       images: [
-        {
+        post.coverImage && {
           url: post?.coverImage?.url,
           width: 800,
           height: 600,
@@ -61,7 +61,7 @@ export async function generateMetadata(
       creator: "@MuzammilLoya",
       title: post.title,
       description,
-      images: [post.coverImage?.url, ...twitterImages],
+      images: [post.coverImage && post.coverImage?.url, ...twitterImages],
     },
   };
 }
