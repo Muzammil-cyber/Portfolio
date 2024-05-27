@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /Muzammil-Loya.pdf
 Sitemap: https://muzammilloya-portfolio.vercel.app/sitemap.xml
+Sitemap: https://muzammilloya-portfolio.vercel.app/blogs/sitemap.xml

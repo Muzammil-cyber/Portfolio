@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
 import DarkMode from "@/context/DarkMode";
 import { Metadata, Viewport } from "next";
+import { BASE_URL } from "@/utils/defualts";
 
 export const metadata: Metadata = {
   title: "Muzammil Loya's Portfolio: Software Engineer",
@@ -38,13 +39,13 @@ export const metadata: Metadata = {
     title: "Muzammil Loya's Portfolio: Software Engineer",
     description:
       "I'm Muzammil Loya, a software engineer passionate about clean code & UX. Check out my portfolio and recent blog posts on recent techs!",
-    url: "https://muzammil-loya.vercel.app/",
+    url: BASE_URL,
     type: "website",
     siteName: "Muzammil Loya's Portfolio",
     locale: "en_US",
     images: [
       {
-        url: "https://muzammil-loya.vercel.app/profile-Cropped.jpg",
+        url: BASE_URL + "/profile-Cropped.jpg",
         width: 800,
         height: 600,
         alt: "Muzammil Loya's Portfolio",
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     title: "Muzammil Loya's Portfolio: Software Engineer",
     description:
       "I'm Muzammil Loya, a software engineer passionate about clean code & UX. Check out my portfolio and recent blog posts on recent techs!",
-    images: ["https://muzammil-loya.vercel.app/profile-Cropped.jpg"],
+    images: [BASE_URL + "/profile-Cropped.jpg"],
   },
 };
 

@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/utils/defualts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,13 +30,13 @@ export const metadata: Metadata = {
     title: "Software Engineer 🚀 | Muzammil Loya's Skills & Experience",
     description:
       "Hi, I'm Muzammil, a 20-year-old software Enginner skilled in HTML, CSS, JavaScript, React, Node.js, and more. Let's connect!",
-    url: "https://muzammil-loya.vercel.app/about",
+    url: BASE_URL + "/profile-Cropped.jpg",
     type: "website",
     siteName: "Muzammil Loya's Portfolio",
     locale: "en_US",
     images: [
       {
-        url: "https://muzammil-loya.vercel.app/profile-Cropped.jpg",
+        url: BASE_URL + "/profile-Cropped.jpg",
         width: 800,
         height: 600,
         alt: "Muzammil Loya's Portfolio Profile",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     title: "Software Engineer 🚀 | Muzammil Loya's Skills & Experience",
     description:
       "Hi, I'm Muzammil, a 20-year-old software Enginner skilled in HTML, CSS, JavaScript, React, Node.js, and more. Let's connect!",
-    images: ["https://muzammil-loya.vercel.app/profile-Cropped.jpg"],
+    images: [BASE_URL + "/profile-Cropped.jpg"],
   },
 };
 
