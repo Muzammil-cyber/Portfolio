@@ -8,41 +8,41 @@ export async function generateMetadata(): Promise<Metadata> {
     .map(({ node }) => node.topic)
     .filter((value, index, self) => self.indexOf(value) === index);
 
-  return {
-    title: "Software Engineer 🚀 | Muzammil Loya's Blog",
-    category: "article",
-    keywords: uniqueTopics,
-    description:
+    const description =
       "Explore diverse topics, expand your mind. 🧠 with " +
       uniqueTopics.join(", ") +
-      "and more.",
-    openGraph: {
-      title: "Blogs",
-      description: "Explore diverse topics, expand your mind. 🧠",
-      url: "https://muzammilloya-portfolio.vercel.app/blogs",
-      type: "article",
-      locale: "en_US",
-      images: edges.map(
-        (edge) =>
-          edge.node.coverImage && {
-            url: edge.node.coverImage?.url,
-            width: edge.node.coverImage?.width,
-            height: edge.node.coverImage?.height,
-            alt: edge.node.title,
-          }
-      ),
-    },
-    twitter: {
-      card: "summary_large_image",
-      creator: "@MuzammilLoya",
+      " and more.";
+
+    return {
       title: "Software Engineer 🚀 | Muzammil Loya's Blog",
-      description:
-        "Explore diverse topics, expand your mind. 🧠 with " +
-        uniqueTopics.join(", ") +
-        "and more.",
-      images: edges.map(({ node }) => node.coverImage && node.coverImage.url),
-    },
-  };
+      category: "article",
+      keywords: uniqueTopics,
+      description,
+
+      openGraph: {
+        title: "Blogs",
+        description,
+        url: "https://muzammilloya-portfolio.vercel.app/blogs",
+        type: "article",
+        locale: "en_US",
+        images: edges.map(
+          (edge) =>
+            edge.node.coverImage && {
+              url: edge.node.coverImage?.url,
+              width: edge.node.coverImage?.width,
+              height: edge.node.coverImage?.height,
+              alt: edge.node.title,
+            }
+        ),
+      },
+      twitter: {
+        card: "summary_large_image",
+        creator: "@MuzammilLoya",
+        title: "Software Engineer 🚀 | Muzammil Loya's Blog",
+        description,
+        images: edges.map(({ node }) => node.coverImage && node.coverImage.url),
+      },
+    };
 }
 
 export default async function BlogsPage() {
