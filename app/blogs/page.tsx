@@ -1,22 +1,16 @@
 import { getPosts } from "@/api/req";
 import Blogs from "@/components/home/blog/Blogs";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const { edges } = await getPosts();
   const uniqueTopics = edges
     .map(({ node }) => node.topic)
     .filter((value, index, self) => self.indexOf(value) === index);
-  const { creator, authors, publisher } = await parent;
 
   return {
     title: "Software Engineer 🚀 | Muzammil Loya's Blog",
     category: "article",
-    creator,
-    publisher,
-    authors,
     keywords: uniqueTopics,
     description:
       "Explore diverse topics, expand your mind. 🧠 with " +
