@@ -31,7 +31,6 @@ export async function generateMetadata(
       // @ts-expect-error
       getPlainText(post.desc.raw)
     ).substring(0, 120) + "...";
-
   return {
     title: post.title,
     category: "article",
@@ -40,7 +39,6 @@ export async function generateMetadata(
     authors,
     keywords: [post.topic, ...post.title.split(" ")],
     description,
-
     openGraph: {
       title: post.title,
       description,

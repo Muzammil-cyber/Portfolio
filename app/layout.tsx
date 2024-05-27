@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description:
       "I'm Muzammil Loya, a software engineer passionate about clean code & UX. Check out my portfolio and recent blog posts on recent techs!",
     url: BASE_URL,
-    type: "website",
+    type: "profile",
     siteName: "Muzammil Loya's Portfolio",
     locale: "en_US",
     images: [
@@ -51,6 +51,10 @@ export const metadata: Metadata = {
         alt: "Muzammil Loya's Portfolio",
       },
     ],
+    firstName: "Muzammil",
+    lastName: "Loya",
+    username: "Muzammil-cyber",
+    gender: "male",
   },
   twitter: {
     card: "summary_large_image",

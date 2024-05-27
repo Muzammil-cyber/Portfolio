@@ -20,10 +20,10 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
 
       openGraph: {
-        title: "Blogs",
+        title: "Software Engineer 🚀 | Muzammil Loya's Blog",
         description,
         url: "https://muzammilloya-portfolio.vercel.app/blogs",
-        type: "article",
+        type: "profile",
         locale: "en_US",
         images: edges.map(
           (edge) =>
@@ -34,6 +34,10 @@ export async function generateMetadata(): Promise<Metadata> {
               alt: edge.node.title,
             }
         ),
+        firstName: "Muzammil",
+        lastName: "Loya",
+        username: "Muzammil-cyber",
+        gender: "male",
       },
       twitter: {
         card: "summary_large_image",

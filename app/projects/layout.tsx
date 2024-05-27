@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Check out my software engineering portfolio showcasing projects like an NFT marketplace built with Next.js and MongoDB, a dog dating app, and more! I use technologies like HTML, CSS, JavaScript, VBscript, React native, and Node.js.",
     url: BASE_URL + "/projects",
-    type: "website",
+    type: "profile",
     siteName: "Muzammil Loya's Portfolio",
     locale: "en_US",
     images: [
@@ -34,6 +34,10 @@ export const metadata: Metadata = {
         alt: "Muzammil Loya's Portfolio",
       },
     ],
+    firstName: "Muzammil",
+    lastName: "Loya",
+    username: "Muzammil-cyber",
+    gender: "male",
   },
   twitter: {
     card: "summary_large_image",

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Hi, I'm Muzammil, a 20-year-old software Enginner skilled in HTML, CSS, JavaScript, React, Node.js, and more. Let's connect!",
     url: BASE_URL + "/profile-Cropped.jpg",
-    type: "website",
+    type: "profile",
     siteName: "Muzammil Loya's Portfolio",
     locale: "en_US",
     images: [
@@ -42,6 +42,10 @@ export const metadata: Metadata = {
         alt: "Muzammil Loya's Portfolio Profile",
       },
     ],
+    firstName: "Muzammil",
+    lastName: "Loya",
+    username: "Muzammil-cyber",
+    gender: "male",
   },
   twitter: {
     card: "summary_large_image",
