@@ -40,6 +40,7 @@ export async function generateMetadata(
     authors,
     keywords: [post.topic, ...post.title.split(" ")],
     description,
+
     openGraph: {
       title: post.title,
       description,
@@ -55,6 +56,7 @@ export async function generateMetadata(
         },
         ...images,
       ],
+      publishedTime: post.createdAt.toString(),
     },
     twitter: {
       card: "summary_large_image",
