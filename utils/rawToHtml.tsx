@@ -47,6 +47,12 @@ const RawToHtml = ({ raw }) => {
             {children}
           </h2>
         ),
+        h3: ({ children }: any) => (
+          <h3 className="dark:text-white text-xl font-bold my-4">{children}</h3>
+        ),
+        h4: ({ children }: any) => (
+          <h4 className="dark:text-white text-lg font-bold my-4">{children}</h4>
+        ),
         code_block: ({ children }: any) => (
           <pre
             className=" bg-slate-100 dark:bg-slate-500 text-md my-4 p-2 rounded font-mono leading-3 "
