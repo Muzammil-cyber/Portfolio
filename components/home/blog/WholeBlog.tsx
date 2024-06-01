@@ -1,9 +1,10 @@
 import { PostWithDescriptionType } from "@/type/types";
+import { getImageRemote } from "@/utils/image";
 import RawToHtml from "@/utils/rawToHtml";
 import Image from "next/image";
 import { useCallback } from "react";
 
-function WholeBlog({ post }: { post: PostWithDescriptionType }) {
+async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
   const dateCreated = useCallback(() => {
     // How long since created?
     const msPerMinute = 60 * 1000;
@@ -28,6 +29,10 @@ function WholeBlog({ post }: { post: PostWithDescriptionType }) {
       return Math.round(elapsed / msPerYear) + " years ago";
     }
   }, [post.createdAt]);
+
+  const { base64, img } = post.coverImage
+    ? await getImageRemote(post.coverImage.url)
+    : { base64: "", img: { src: "", height: 0, width: 0 } };
   return (
     <>
       <h1 className="text-4xl font-bold mb-2">{post.title}</h1>
@@ -39,11 +44,13 @@ function WholeBlog({ post }: { post: PostWithDescriptionType }) {
       </p>
       {post.coverImage && (
         <Image
-          src={post.coverImage.url}
+          src={img.src}
           alt={post.title}
-          width={post.coverImage.width}
-          height={post.coverImage.height}
+          width={img.width}
+          height={img.height}
           className="w-full md:h-96 object-cover rounded-lg mb-4 aspect-video"
+          placeholder="blur"
+          blurDataURL={base64}
         />
       )}
 

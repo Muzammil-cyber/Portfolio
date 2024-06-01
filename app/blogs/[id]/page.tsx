@@ -1,11 +1,12 @@
 import { getPostById } from "@/api/req";
 import WholeBlog from "@/components/home/blog/WholeBlog";
+import { BASE_URL } from "@/utils/defualts";
 import { getPlainText } from "@/utils/getPlainText";
 import { Metadata, ResolvingMetadata } from "next";
 
 import { notFound } from "next/navigation";
 
-const BASE_URL = "https://muzammilloya-portfolio.vercel.app";
+
 
 interface Props {
   params: { id: string };
