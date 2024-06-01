@@ -1,14 +1,11 @@
-import { ImageType } from "@/type/types";
-import Image from "next/image";
 import Link from "next/link";
-import me from "../../public/profile-removebg.png";
 import HeroLink from "./HeroLink";
 import AnimatedText from "./Hero/AnimateText";
+import dynamic from "next/dynamic";
+
+const DynamicImage = dynamic(() => import("./HeroImage"));
 
 export default function HeroHome() {
-  // { base64, img }: ImageType
-  const str: string =
-    "Executive Director of Web Devlopment @ GDSC \n Freelancer \n IoBM '26";
   return (
     <section className="bg-white dark:bg-slate-900 lg:flex ">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:text-right text-center lg:py-16 lg:w-1/2">
@@ -37,22 +34,7 @@ export default function HeroHome() {
           </Link>
         </div>
       </div>
-      <div className="lg:flex hidden w-1/2  items-center justify-center">
-        <Image
-          src={"/profile-removebg.png"}
-          alt="Muzammil's profile picture without background"
-          width={400}
-          height={400}
-          // width={img.width}
-          // height={img.height}
-          // blurDataURL={base64}
-          // placeholder="blur"
-
-          priority={false}
-          className="rounded-full w-64 h-auto absolute z-30"
-        />
-        <div className="w-64 h-80 rounded-full image-back absolute z-0"></div>
-      </div>
+      <DynamicImage />
     </section>
   );
 }
