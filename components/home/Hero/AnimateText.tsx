@@ -23,6 +23,7 @@ type AnimatedTextProps = {
   text: string; // The text to be animated.
   duration?: number; // The duration of the animation in seconds.
   className?: string; // The class name for the component.
+  delay?: number; // The delay before the animation starts in seconds.
 };
 
 /**
@@ -34,6 +35,7 @@ export default function AnimatedText({
   text,
   duration = 10,
   className,
+  delay = 0,
 }: AnimatedTextProps) {
   // `count` is a motion value that starts at 0 and will animate up to the length of the text.
   const count = useMotionValue(0);
@@ -47,6 +49,9 @@ export default function AnimatedText({
   // `animationCompleted` is a state variable to keep track of whether the animation has completed.
   const [animationCompleted, setAnimationCompleted] = useState(false);
 
+  // `hideCarter` is a state variable that hides | when delay and when animation completed
+  const [hideCarter, setHideCarter] = useState(delay > 0);
+
   useEffect(() => {
     /**
      * Initiating the animation of the `count` motion value from 0 to the length of the text.
@@ -54,6 +59,7 @@ export default function AnimatedText({
      * An `onUpdate` callback is specified to check if the animation is complete, and if so, `setAnimationCompleted` is called with `true`.
      */
     const controls = animate(count, text.length, {
+      delay,
       type: "tween",
       duration,
       ease: "linear",
@@ -64,10 +70,25 @@ export default function AnimatedText({
       },
     });
 
+    // set `hideCarter` false when delay period done
+    if (delay > 0) {
+      setTimeout(() => {
+        setHideCarter(false);
+      }, delay * 1000);
+    }
+
     // Returning a cleanup function to stop the animation when the component is unmounted.
     return controls.stop;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty dependency array means this useEffect will only run once, similar to `componentDidMount`.
+
+  useEffect(() => {
+    if (animationCompleted) {
+      setTimeout(() => {
+        setHideCarter(true);
+      }, 500);
+    }
+  }, [animationCompleted]);
 
   return (
     /**
@@ -77,7 +98,7 @@ export default function AnimatedText({
      */
     <span className={className}>
       <motion.span className={className}>{displayText}</motion.span>
-      {!animationCompleted && (
+      {!hideCarter && (
         <motion.span className="animate-ping font-extralight text-inherit">
           |
         </motion.span>

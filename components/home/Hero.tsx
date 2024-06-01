@@ -7,6 +7,8 @@ import AnimatedText from "./Hero/AnimateText";
 
 export default function HeroHome() {
   // { base64, img }: ImageType
+  const str: string =
+    "Executive Director of Web Devlopment @ GDSC \n Freelancer \n IoBM '26";
   return (
     <section className="bg-white dark:bg-slate-900 lg:flex ">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:text-right text-center lg:py-16 lg:w-1/2">
@@ -16,8 +18,12 @@ export default function HeroHome() {
           Software Engineer
         </h1>
         <h2 className="mb-8 font-bold text-lg  text-slate-500 lg:text-xl   dark:text-slate-400">
-          Executive Director of Web Devlopment @ GDSC <br /> Freelancer <br />{" "}
-          IoBM &apos;26
+          <AnimatedText
+            text="Executive Director of Web Devlopment @ GDSC"
+            duration={2}
+          />
+          <br /> <AnimatedText text="Freelancer" duration={1} delay={2} />{" "}
+          <br /> <AnimatedText text="IoBM '26" duration={1} delay={3} />
         </h2>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center lg:justify-end sm:space-y-0">
           <HeroLink />
