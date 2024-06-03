@@ -18,6 +18,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { id } = params;
   const post = await getPostById(id);
+  if (!post) notFound();
   const {
     creator,
     authors,
