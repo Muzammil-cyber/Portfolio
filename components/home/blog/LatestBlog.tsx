@@ -32,7 +32,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
     }
   }, [post.createdAt]);
   return (
-    <section className="px-4 py-8 w-full flex flex-col lg:flex-row bg-white dark:bg-slate-900 justify-center gap-6 lg:h-[572px]">
+    <section className="px-4 py-8 w-full flex flex-col lg:flex-row bg-white dark:bg-secondary-900 justify-center gap-6 lg:h-[572px]">
       <main className="max-w-3xl w-full lg:w-2/3">
         <h2 className="text-3xl sm:text-5xl font-extrabold dark:text-white mb-6">
           Latest Blog Post
@@ -40,16 +40,16 @@ const LatestBlog = ({ post }: { post: PostType }) => {
         <Link href={`blogs/${post.id}`}>
           <div className="w-full h-auto aspect-video relative">
             <div className="absolute bottom-0 left-0 m-4">
-              <p className="sm:texl-2xl text-xs  font-bold bg-white dark:bg-slate-800 py-2 px-4 rounded-t-lg uppercase inline">
+              <p className="sm:texl-2xl text-xs  font-bold bg-white dark:bg-secondary-800 py-2 px-4 rounded-t-lg uppercase inline">
                 {/* Span for purple dot */}
-                <span className="bg-indigo-700 w-2 h-2 rounded-full inline-block mr-2"></span>
+                <span className="bg-primary-700 w-2 h-2 rounded-full inline-block mr-2"></span>
                 {post.topic}
               </p>
-              <h3 className="sm:text-4xl font-extrabold bg-white dark:bg-slate-800 p-2 sm:p-4 rounded-b-lg rounded-tr-lg">
+              <h3 className="sm:text-4xl font-extrabold bg-white dark:bg-secondary-800 p-2 sm:p-4 rounded-b-lg rounded-tr-lg">
                 {post.title}
               </h3>
             </div>
-            <div className="absolute top-4 right-4 rounded-full bg-white dark:bg-slate-800 px-2">
+            <div className="absolute top-4 right-4 rounded-full bg-white dark:bg-secondary-800 px-2">
               <p className="max-sm:text-xs p-2 font-bold">{dateCreated()}</p>
             </div>
             {post.coverImage ? (
@@ -86,7 +86,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
               alt="To project page"
               className="w-full h-auto object-contain rounded-lg"
             />
-            <h5 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white bg-slate-800 px-4 py-2 rounded-lg sm:group-hover:text-2xl">
+            <h5 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white bg-secondary-800 px-4 py-2 rounded-lg sm:group-hover:text-2xl">
               More Blog Posts
             </h5>
           </Link>

@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }) {
   return (
-    <div className="w-full  h-fit dark:bg-slate-900 dark:text-white">
+    <div className="w-full  h-fit dark:bg-secondary-900 dark:text-white">
       {children}
     </div>
   );

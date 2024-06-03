@@ -22,10 +22,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-100 dark:bg-slate-800 sm:flex sm:justify-between  sm:pt-3 sm:items-center flex-1 flex-col">
+    <footer className="bg-secondary-100 dark:bg-secondary-800 sm:flex sm:justify-between  sm:pt-3 sm:items-center flex-1 flex-col">
       <section className="flex w-full px-4 py-4 ">
         <div className="w-1/2">
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+          <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-4">
             Let&apos;s build something together
           </h3>
           <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
@@ -51,7 +51,7 @@ export default function Footer() {
               key={"ref-" + index}
               href={link.link}
               aria-label={"Link to " + link.name}
-              className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-indigo-500 dark:hover:text-indigo-500 max-sm:w-12 max-sm:h-12"
+              className="text-2xl px-2 py-1 text-gray-700 dark:text-white hover:text-primary-500 dark:hover:text-primary-500 max-sm:w-12 max-sm:h-12"
             >
               {link.icon}
             </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
         </nav>
       </section>
 
-      <p className="text-gray-500 dark:text-gray-400 text-xs w-full border-t-[1px] dark:border-t-slate-600 text-center py-3">
+      <p className="text-gray-500 dark:text-gray-400 text-xs w-full border-t-[1px] dark:border-t-secondary-600 text-center py-3">
         &copy; {new Date().getFullYear()} Muzammil Loya. All rights reserved
       </p>
     </footer>

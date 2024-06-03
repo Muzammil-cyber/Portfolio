@@ -17,7 +17,7 @@ export default function Project({
       whileInView={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.05 }}
       viewport={{ once: true }}
-      className="rounded-lg w-full max-w-lg bg-slate-100 dark:bg-slate-800 text-left p-4 space-y-2"
+      className="rounded-lg w-full max-w-lg bg-secondary-100 dark:bg-secondary-800 text-left p-4 space-y-2"
     >
       <h3 className="text-3xl font-extrabold">{title}</h3>
       <p className="text-lg">{desc}</p>
@@ -26,7 +26,7 @@ export default function Project({
           {tech.map((t) => (
             <span
               key={t}
-              className="dark:text-indigo-500 text-indigo-800 text-xs border-2 border-indigo-800 dark:border-indigo-500 uppercase px-2 rounded-xl"
+              className="dark:text-primary-500 text-primary-800 text-xs border-2 border-primary-800 dark:border-primary-500 uppercase px-2 rounded-xl"
             >
               {t}
             </span>

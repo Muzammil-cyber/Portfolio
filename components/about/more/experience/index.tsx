@@ -5,13 +5,13 @@ import { Exp } from "./data";
 function Experience({ title, date, company, location, ifLatest }: ExpType) {
   return (
     <li className="mb-10 ms-6">
-      <span className="absolute flex items-center justify-center w-6 h-6 bg-indigo-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-indigo-900">
-        <FaCalendar className="w-2.5 h-2.5 text-indigo-800 dark:text-indigo-300" />
+      <span className="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+        <FaCalendar className="w-2.5 h-2.5 text-primary-800 dark:text-primary-300" />
       </span>
       <h4 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
         {title}{" "}
         {ifLatest && (
-          <span className="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 ms-3">
+          <span className="bg-primary-100 text-primary-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300 ms-3">
             Latest
           </span>
         )}

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }) {
   return (
-    <div className="w-full  h-fit dark:bg-slate-900 dark:text-white">
+    <div className="w-full  h-fit dark:bg-secondary-900 dark:text-white">
       <main className="w-full max-w-6xl py-6 px-4 text-center mx-auto ">
         <h1 className="text-4xl font-bold mb-2">Projects</h1>
         <p className="text-base mb-8">Everthing that I have build 🛠</p>

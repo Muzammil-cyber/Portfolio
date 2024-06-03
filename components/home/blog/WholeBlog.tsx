@@ -34,8 +34,8 @@ async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
   return (
     <>
       <h1 className="text-4xl font-bold mb-2">{post.title}</h1>
-      <p className="text-sm dark:text-slate-100 mb-4">
-        <span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">
+      <p className="text-sm dark:text-secondary-100 mb-4">
+        <span className="bg-primary-800 text-white uppercase py-1 px-2 rounded-xl">
           {post.topic}
         </span>{" "}
         • {dateCreated()}

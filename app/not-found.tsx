@@ -8,7 +8,7 @@ const DynamicImage = dynamic(() => import("@/components/NextImage"));
 
 export default async function NotFound() {
   return (
-    <main className="flex-auto min-h-full text-center flex items-center justify-center flex-col sm:flex-row p-10 bg-white dark:bg-slate-900">
+    <main className="flex-auto min-h-full text-center flex items-center justify-center flex-col sm:flex-row p-10 bg-white dark:bg-secondary-900">
       <DynamicImage
         src={"/not-found.png"}
         width={500}
@@ -19,7 +19,7 @@ export default async function NotFound() {
         className="max:sm:w-64 max-sm:h-auto"
       />
       {/* vertical line in between*/}
-      <div className="w-1 h-40 bg-slate-200 dark:bg-slate-800 mx-10 hidden sm:block"></div>
+      <div className="w-1 h-40 bg-secondary-200 dark:bg-secondary-800 mx-10 hidden sm:block"></div>
 
       <div className="text-left space-y-4">
         <h1 className="text-4xl font-bold uppercase">

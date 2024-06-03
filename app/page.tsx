@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <main className="flex-auto">
       <HeroHome />
-      <hr className="border-t-4 dark:border-slate-800" />
+      <hr className="border-t-4 dark:border-secondary-800" />
       <Suspense fallback={<LoadingBlog />}>
         <LatestBlog post={post} />
       </Suspense>

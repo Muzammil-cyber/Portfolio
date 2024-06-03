@@ -104,7 +104,7 @@ export const SkillSet: SkillType[] = [
         id: 12,
         title: 'Stripe',
         Icon: FaStripe,
-        theme: "bg-indigo-500 !text-3xl"
+        theme: "bg-primary-500 !text-3xl"
     },
     {
         id: 13,
@@ -116,7 +116,7 @@ export const SkillSet: SkillType[] = [
         id: 14,
         title: 'CMS',
         Icon: SiPayloadcms,
-        theme: "bg-slate-800 !text-2xl"
+        theme: "bg-secondary-800 !text-2xl"
     },
     {
         id: 15,

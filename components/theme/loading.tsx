@@ -1,6 +1,6 @@
 export default function LoadingTheme() {
   return (
-    <div className="h-6 w-12 rounded-3xl bg-slate-400 dark:bg-slate-500 animate-pulse">
+    <div className="h-6 w-12 rounded-3xl bg-secondary-400 dark:bg-secondary-500 animate-pulse">
       <></>
     </div>
   );

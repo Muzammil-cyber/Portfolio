@@ -6,13 +6,13 @@ export function SkillLoading() {
         All the technologies I feel comfortable with ⚙️
       </p>
       <ul className="flex flex-wrap gap-2 w-full">
-        <li className="skill rounded-xl h-12 w-12 bg-slate-300 dark:bg-slate-500 animate-pulse relative flex items-center justify-center">
+        <li className="skill rounded-xl h-12 w-12 bg-secondary-300 dark:bg-secondary-500 animate-pulse relative flex items-center justify-center">
           <span className="sr-only">skill loading</span>
         </li>
-        <li className="skill rounded-xl h-12 w-12 bg-slate-300 dark:bg-slate-500 animate-pulse relative flex items-center justify-center">
+        <li className="skill rounded-xl h-12 w-12 bg-secondary-300 dark:bg-secondary-500 animate-pulse relative flex items-center justify-center">
           <span className="sr-only">skill loading</span>
         </li>
-        <li className="skill rounded-xl h-12 w-12 bg-slate-300 dark:bg-slate-500 animate-pulse relative flex items-center justify-center">
+        <li className="skill rounded-xl h-12 w-12 bg-secondary-300 dark:bg-secondary-500 animate-pulse relative flex items-center justify-center">
           <span className="sr-only">skill loading</span>
         </li>
       </ul>
