@@ -1,7 +1,10 @@
 import { PostType } from "@/type/types";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
 import Link from "next/link";
 import { useCallback } from "react";
+
+const DynamicImage = dynamic(() => import("@/components/NextImage"));
 
 const LatestBlog = ({ post }: { post: PostType }) => {
   const dateCreated = useCallback(() => {
@@ -50,7 +53,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
               <p className="max-sm:text-xs p-2 font-bold">{dateCreated()}</p>
             </div>
             {post.coverImage ? (
-              <Image
+              <DynamicImage
                 className="w-full h-full object-cover rounded-lg"
                 src={post.coverImage.url}
                 alt={post.title}
@@ -58,7 +61,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
                 height={post.coverImage.height}
               />
             ) : (
-              <Image
+              <DynamicImage
                 className="w-full h-full object-cover rounded-lg"
                 src={"/DefualtImage.jpg"}
                 alt={"Defualt Image"}
@@ -76,7 +79,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
             href={`/blogs`}
             className="relative flex h-1/2 items-center justify-center overflow-hidden rounded-lg group parent max-lg:w-1/2"
           >
-            <Image
+            <DynamicImage
               src={"/blog-background.png"}
               height={90}
               width={160}
@@ -92,7 +95,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
             href={`/projects`}
             className="relative flex h-1/2 items-center justify-center overflow-hidden rounded-lg group max-lg:w-1/2"
           >
-            <Image
+            <DynamicImage
               src={"/project_background.png"}
               height={90}
               width={160}

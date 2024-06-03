@@ -1,9 +1,12 @@
 import { PostType } from "@/type/types";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
 import Link from "next/link";
 import { useCallback } from "react";
 import { PiReadCvLogoFill } from "react-icons/pi";
+
+const DynamicImage = dynamic(() => import("@/components/NextImage"));
 
 export default function Post({ post }: { post: PostType }) {
   const dateCreated = useCallback(() => {
@@ -44,7 +47,7 @@ export default function Post({ post }: { post: PostType }) {
         viewport={{ once: true }}
       >
         {post.coverImage && (
-          <Image
+          <DynamicImage
             src={post.coverImage.url}
             width={post.coverImage.width}
             height={post.coverImage.height}

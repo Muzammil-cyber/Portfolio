@@ -1,8 +1,9 @@
 import { PostWithDescriptionType } from "@/type/types";
-import { getImageRemote } from "@/utils/image";
 import RawToHtml from "@/utils/rawToHtml";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import { useCallback } from "react";
+
+const DynamicImage = dynamic(() => import("@/components/NextImage"));
 
 async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
   const dateCreated = useCallback(() => {
@@ -40,7 +41,7 @@ async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
         • {dateCreated()}
       </p>
       {post.coverImage && (
-        <Image
+        <DynamicImage
           src={img.url}
           alt={post.title}
           width={img.width}
