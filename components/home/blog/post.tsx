@@ -52,9 +52,9 @@ export default function Post({ post }: { post: PostType }) {
             className="object-cover mb-2 rounded-t"
           />
         )}
-        <motion.h1 className="text-3xl font-extrabold dark:text-white">
+        <motion.h3 className="text-3xl font-extrabold dark:text-white">
           {post.title}
-        </motion.h1>
+        </motion.h3>
         <motion.div className="mt-4 flex justify-between items-center">
           <motion.p className="text-sm dark:text-slate-300">
             <motion.span className="bg-indigo-800 text-white uppercase py-1 px-2 rounded-xl">

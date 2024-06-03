@@ -31,9 +31,9 @@ const LatestBlog = ({ post }: { post: PostType }) => {
   return (
     <section className="px-4 py-8 w-full flex flex-col lg:flex-row bg-white dark:bg-slate-900 justify-center gap-6 lg:h-[572px]">
       <main className="max-w-3xl w-full lg:w-2/3">
-        <h1 className="text-3xl sm:text-5xl font-extrabold dark:text-white mb-6">
+        <h2 className="text-3xl sm:text-5xl font-extrabold dark:text-white mb-6">
           Latest Blog Post
-        </h1>
+        </h2>
         <Link href={`blogs/${post.id}`}>
           <div className="w-full h-auto aspect-video relative">
             <div className="absolute bottom-0 left-0 m-4">
@@ -42,9 +42,9 @@ const LatestBlog = ({ post }: { post: PostType }) => {
                 <span className="bg-indigo-700 w-2 h-2 rounded-full inline-block mr-2"></span>
                 {post.topic}
               </p>
-              <h2 className="sm:text-4xl font-extrabold bg-white dark:bg-slate-800 p-2 sm:p-4 rounded-b-lg rounded-tr-lg">
+              <h3 className="sm:text-4xl font-extrabold bg-white dark:bg-slate-800 p-2 sm:p-4 rounded-b-lg rounded-tr-lg">
                 {post.title}
-              </h2>
+              </h3>
             </div>
             <div className="absolute top-4 right-4 rounded-full bg-white dark:bg-slate-800 px-2">
               <p className="max-sm:text-xs p-2 font-bold">{dateCreated()}</p>
@@ -70,7 +70,7 @@ const LatestBlog = ({ post }: { post: PostType }) => {
         </Link>
       </main>
       <aside className="lg:w-1/3 max-lg:max-w-3xl">
-        <h3 className="text-3xl font-bold mb-9">More</h3>
+        <h4 className="text-3xl font-bold mb-9">More</h4>
         <div className="flex lg:flex-col h-5/6 gap-4 w-full">
           <Link
             href={`/blogs`}
@@ -83,9 +83,9 @@ const LatestBlog = ({ post }: { post: PostType }) => {
               alt="To project page"
               className="w-full h-auto object-contain rounded-lg"
             />
-            <h4 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white bg-slate-800 px-4 py-2 rounded-lg sm:group-hover:text-2xl">
+            <h5 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white bg-slate-800 px-4 py-2 rounded-lg sm:group-hover:text-2xl">
               More Blog Posts
-            </h4>
+            </h5>
           </Link>
 
           <Link
@@ -99,9 +99,9 @@ const LatestBlog = ({ post }: { post: PostType }) => {
               alt="To project page"
               className="w-full h-auto object-contain rounded-lg"
             />
-            <h4 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white sm:group-hover:text-2xl">
+            <h5 className="absolute text-xs sm:text-3xl font-bold uppercase !text-white sm:group-hover:text-2xl">
               My projects
-            </h4>
+            </h5>
           </Link>
         </div>
       </aside>

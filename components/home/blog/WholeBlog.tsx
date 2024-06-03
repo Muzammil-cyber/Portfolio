@@ -29,10 +29,7 @@ async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
       return Math.round(elapsed / msPerYear) + " years ago";
     }
   }, [post.createdAt]);
-
-  const { base64, img } = post.coverImage
-    ? await getImageRemote(post.coverImage.url)
-    : { base64: "", img: { src: "", height: 0, width: 0 } };
+  const img = post.coverImage;
   return (
     <>
       <h1 className="text-4xl font-bold mb-2">{post.title}</h1>
@@ -44,13 +41,11 @@ async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
       </p>
       {post.coverImage && (
         <Image
-          src={img.src}
+          src={img.url}
           alt={post.title}
           width={img.width}
           height={img.height}
           className="w-full md:h-96 object-cover rounded-lg mb-4 aspect-video"
-          placeholder="blur"
-          blurDataURL={base64}
         />
       )}
 
