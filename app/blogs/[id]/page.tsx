@@ -17,7 +17,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { id } = params;
-  const post = await getPostById(id);
+  const post = await getPostById(id.toLowerCase());
   if (!post) notFound();
   const {
     creator,
@@ -70,7 +70,7 @@ export async function generateMetadata(
 
 export default async function Page({ params }: Props) {
   const { id } = params;
-  const post = await getPostById(id);
+  const post = await getPostById(id.toLowerCase());
   if (!post) notFound();
   return (
     <main className="w-full max-w-4xl py-6 px-4 mx-auto">
