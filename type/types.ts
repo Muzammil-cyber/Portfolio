@@ -33,7 +33,8 @@ export interface PostWithDescriptionType {
         height: number;
     };
     desc: {
-        raw: PostDescriptionType
+        raw?: PostDescriptionType;
+        text?: string;
     };
 
 }

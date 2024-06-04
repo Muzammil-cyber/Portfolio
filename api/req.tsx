@@ -165,4 +165,30 @@ export const getPostById = async (id: ID): Promise<PostWithDescriptionType> => {
   return post;
 };
 
+export const getPostsMeta = async (): Promise<PostWithDescriptionType[]> => {
+  noStore();
+  const QUERY = gql`
+    {
+      posts(last: 20) {
+        id
+        title
+        topic
+        createdAt
+        coverImage {
+          id
+          url
+          width
+          height
+        }
+        desc {
+          raw
+        }
+      }
+    }
+  `;
+  const { posts }: { posts: PostWithDescriptionType[] } =
+    await hygraph.request(QUERY);
+  return posts;
+};
+
 // This code exports two functions, `getPosts` and `getProjects`, which fetch data from a GraphQL API and return it as arrays of custom data types `PostType` and `ProjectType` respectively. The `noStore` function is used to disable caching for this page because the data is expected to change frequently.
