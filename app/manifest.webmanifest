@@ -2,10 +2,10 @@
     "id": "com.muzammilloya.portfolio",
     "name": "Muzammil Loya's Portfolio: Software Engineer",
     "short_name": "Muzammil's Portfolio",
-    "description": "An application built with Next.js, A portfolio of Muzammil Loya",
+    "description": "I'm Muzammil Loya, a software engineer passionate about clean code & UX. Check out my portfolio and recent blog posts on recent techs!",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#000000",
+    "background_color": "#fff",
     "orientation": "portrait-primary",
     "theme_color": "#4438ca",
     "icons": [
@@ -38,7 +38,7 @@
     ],
     "shortcuts": [
         {
-            "name": "Projects",
+            "name": "Portfolio",
             "url": "/projects",
             "icons": [
                 {
@@ -49,8 +49,19 @@
             ]
         },
         {
-            "name": "About",
+            "name": "Skills & Experience",
             "url": "/about",
+            "icons": [
+                {
+                    "src": "/android-chrome-192x192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Blog",
+            "url": "/blogs",
             "icons": [
                 {
                     "src": "/android-chrome-192x192.png",
