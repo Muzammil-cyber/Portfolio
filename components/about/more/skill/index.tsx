@@ -27,15 +27,15 @@ export default function Skill({ title, Icon, theme }: Omit<SkillType, "id">) {
 
   return (
     <li
-      className={`skill rounded-xl h-12 w-12 ${color} text-black relative flex items-center justify-center`}
+      className={`skill h-12 w-12 rounded-xl ${color} relative flex items-center justify-center text-black`}
       ref={scope}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
     >
-      <span className="rounded-lg text-white bg-secondary-950 px-1 py-1 text-xs  absolute -top-2 -left-4 opacity-0">
+      <span className="absolute -left-4 -top-2 rounded-lg bg-secondary-950 px-1 py-1 text-xs text-white opacity-0">
         {title}
       </span>
-      <Icon className={`fill-white  ${size ? size : "text-xl"}`} />
+      <Icon className={`fill-white ${size ? size : "text-xl"}`} />
     </li>
   );
 }
