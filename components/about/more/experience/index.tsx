@@ -5,18 +5,18 @@ import { Exp } from "./data";
 function Experience({ title, date, company, location, ifLatest }: ExpType) {
   return (
     <li className="mb-10 ms-6">
-      <span className="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
-        <FaCalendar className="w-2.5 h-2.5 text-primary-800 dark:text-primary-300" />
+      <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900">
+        <FaCalendar className="h-2.5 w-2.5 text-primary-800 dark:text-primary-300" />
       </span>
-      <h4 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+      <h4 className="mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
         {title}{" "}
-        {ifLatest && (
-          <span className="bg-primary-100 text-primary-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300 ms-3">
+        {(ifLatest || date.includes("Present")) && (
+          <span className="me-2 ms-3 rounded bg-primary-100 px-2.5 py-0.5 text-sm font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
             Latest
           </span>
         )}
       </h4>
-      <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+      <time className="mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
         {date}
       </time>
       <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
@@ -28,9 +28,9 @@ function Experience({ title, date, company, location, ifLatest }: ExpType) {
 
 export default function Experiences() {
   return (
-    <article className="sm:w-1/2 text-left">
-      <h3 className="text-3xl font-bold mb-3">Experience</h3>
-      <p className="font-medium mb-2">
+    <article className="text-left sm:w-1/2">
+      <h3 className="mb-3 text-3xl font-bold">Experience</h3>
+      <p className="mb-2 font-medium">
         All the places I&apos;ve worked at so far 💼
       </p>
       <ol className="relative border-s border-gray-200 dark:border-gray-700">

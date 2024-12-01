@@ -1,8 +1,8 @@
 import { FaCss3, FaDocker, FaGitAlt, FaHtml5, FaNode, FaReact, FaStripe } from "react-icons/fa";
-import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
-import { SiTypescript, SiJavascript, SiMongodb, SiTailwindcss, SiChakraui, SiPostgresql, SiFramer, SiFirebase, SiPayloadcms } from "react-icons/si";
+import { TbBrandFramerMotion, TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
+import { SiTypescript, SiJavascript, SiMongodb, SiTailwindcss, SiChakraui, SiPostgresql, SiFramer, SiFirebase, SiPayloadcms, SiSvelte, SiGreensock } from "react-icons/si";
 import { SkillType } from "@/type/types";
-import AgileIcon from "@/components/icons/AgileIcon";
+
 export const SkillSet: SkillType[] = [
     {
         id: 1,
@@ -46,6 +46,12 @@ export const SkillSet: SkillType[] = [
 
     },
     {
+        id: 21,
+        title: 'Svelte',
+        Icon: SiSvelte,
+        theme: "bg-orange-500"
+    },
+    {
         id: 7,
         title: 'Nodejs',
         Icon: FaNode,
@@ -82,10 +88,16 @@ export const SkillSet: SkillType[] = [
     },
     {
         id: 20,
-        title: 'Framer-motion',
-        Icon: SiFramer,
-        theme: "bg-blue-800"
+        title: 'Motion',
+        Icon: TbBrandFramerMotion,
+        theme: "bg-yellow-500 !text-3xl"
 
+    },
+    {
+        id: 22,
+        title: 'GSAP',
+        Icon: SiGreensock,
+        theme: "bg-green-500 !text-3xl"
     },
     {
         id: 10,
@@ -124,11 +136,4 @@ export const SkillSet: SkillType[] = [
         Icon: FaDocker,
         theme: "bg-blue-500 !text-3xl"
     },
-    {
-        id: 16,
-        title: 'Agile',
-        Icon: AgileIcon,
-        theme: 'bg-gray-100'
-    }
-
 ];
