@@ -1,5 +1,5 @@
 import { PostType } from "@/type/types";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 
 import Link from "next/link";
@@ -41,7 +41,7 @@ export default function Post({ post }: { post: PostType }) {
       className={`w-full ${post.coverImage && `row-span-2`}`}
     >
       <motion.div
-        className="sm:max-w-lg p-4 cursor-pointer max-sm:w-full"
+        className="cursor-pointer p-4 max-sm:w-full sm:max-w-lg"
         initial={{ opacity: 0, y: -5 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -52,15 +52,15 @@ export default function Post({ post }: { post: PostType }) {
             width={post.coverImage.width}
             height={post.coverImage.height}
             alt={post.title}
-            className="object-cover mb-2 rounded-t"
+            className="mb-2 rounded-t object-cover"
           />
         )}
         <motion.h3 className="text-3xl font-extrabold dark:text-white">
           {post.title}
         </motion.h3>
-        <motion.div className="mt-4 flex justify-between items-center">
+        <motion.div className="mt-4 flex items-center justify-between">
           <motion.p className="text-sm dark:text-secondary-300">
-            <motion.span className="bg-primary-800 text-white uppercase py-1 px-2 rounded-xl">
+            <motion.span className="rounded-xl bg-primary-800 px-2 py-1 uppercase text-white">
               {post.topic}
             </motion.span>{" "}
             • {dateCreated()}
@@ -74,4 +74,3 @@ export default function Post({ post }: { post: PostType }) {
     </Link>
   );
 }
-

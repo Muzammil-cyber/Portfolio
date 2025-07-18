@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ProjectType } from "@/type/types";
 import { PiGlobe } from "react-icons/pi";
 import Link from "next/link";
@@ -17,16 +17,16 @@ export default function Project({
       whileInView={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.05 }}
       viewport={{ once: true }}
-      className="rounded-lg w-full max-w-lg bg-secondary-100 dark:bg-secondary-800 text-left p-4 space-y-2"
+      className="w-full max-w-lg space-y-2 rounded-lg bg-secondary-100 p-4 text-left dark:bg-secondary-800"
     >
       <h3 className="text-3xl font-extrabold">{title}</h3>
       <p className="text-lg">{desc}</p>
-      <div className="flex justify-between items-center">
-        <div className="flex gap-2 max-w-[12rem] flex-wrap">
+      <div className="flex items-center justify-between">
+        <div className="flex max-w-[12rem] flex-wrap gap-2">
           {tech.map((t) => (
             <span
               key={t}
-              className="dark:text-primary-500 text-primary-800 text-xs border-2 border-primary-800 dark:border-primary-500 uppercase px-2 rounded-xl"
+              className="rounded-xl border-2 border-primary-800 px-2 text-xs uppercase text-primary-800 dark:border-primary-500 dark:text-primary-500"
             >
               {t}
             </span>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import "./toggler.css";
 import { LuMoon, LuSun } from "react-icons/lu";
 import { DarkContext } from "@/context/DarkMode";
@@ -18,7 +18,7 @@ const ThemeToggler = () => {
       <motion.div layout className="handle">
         <AnimatePresence mode="wait" initial={false}>
           <motion.i
-            className={`icon `}
+            className={`icon`}
             key={isDark ? "moon" : "sun"}
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

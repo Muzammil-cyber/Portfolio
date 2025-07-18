@@ -5,7 +5,7 @@ import { useCallback } from "react";
 
 const DynamicImage = dynamic(() => import("@/components/NextImage"));
 
-async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
+function WholeBlog({ post }: { post: PostWithDescriptionType }) {
   const dateCreated = useCallback(() => {
     // How long since created?
     const msPerMinute = 60 * 1000;
@@ -33,9 +33,9 @@ async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
   const img = post.coverImage;
   return (
     <>
-      <h1 className="text-4xl font-bold mb-2">{post.title}</h1>
-      <p className="text-sm dark:text-secondary-100 mb-4">
-        <span className="bg-primary-800 text-white uppercase py-1 px-2 rounded-xl">
+      <h1 className="mb-2 text-4xl font-bold">{post.title}</h1>
+      <p className="mb-4 text-sm dark:text-secondary-100">
+        <span className="rounded-xl bg-primary-800 px-2 py-1 uppercase text-white">
           {post.topic}
         </span>{" "}
         • {dateCreated()}
@@ -46,11 +46,11 @@ async function WholeBlog({ post }: { post: PostWithDescriptionType }) {
           alt={post.title}
           width={img.width}
           height={img.height}
-          className="w-full md:h-96 object-cover rounded-lg mb-4 aspect-video"
+          className="mb-4 aspect-video w-full rounded-lg object-cover md:h-96"
         />
       )}
 
-      <section className="text-left space-y-4 first-letter:text-8xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+      <section className="space-y-4 text-left first-letter:float-left first-letter:mr-3 first-letter:text-8xl first-letter:font-bold">
         <RawToHtml raw={post.desc.raw} />
       </section>
     </>

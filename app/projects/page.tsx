@@ -2,15 +2,13 @@ import { getPorjects } from "@/api/req";
 import LoadingProject from "@/components/projects/loading";
 import dynamic from "next/dynamic";
 
-
 const DynamicProjects = dynamic(() => import("@/components/projects"), {
   loading: () => <ProjectLoading />,
-  ssr: false,
 });
 
 function ProjectLoading() {
   return (
-    <div className="w-full flex flex-wrap-reverse gap-4 justify-center">
+    <div className="flex w-full flex-wrap-reverse justify-center gap-4">
       <LoadingProject />
       <LoadingProject />
       <LoadingProject />

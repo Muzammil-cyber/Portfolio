@@ -1,32 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap");
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
-
-
 @layer base {
-  h1,h2,h3,h4,h5,p,button,a{
-    @apply text-secondary-900 dark:text-white
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  button,
+  a {
+    @apply text-secondary-900 dark:text-white;
   }
 }
 
-@layer components{
-  .link{
-    @apply text-primary-700 hover:text-primary-800 dark:text-primary-600 dark:hover:text-primary-700 text-sm font-sans font-semibold hover:cursor-pointer
+@layer components {
+  .link {
+    @apply font-sans text-sm font-semibold text-primary-700 hover:cursor-pointer hover:text-primary-800 dark:text-primary-600 dark:hover:text-primary-700;
   }
   .primary-icon-btn {
-    @apply inline-flex justify-center gap-2 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900;
   }
   .secondary-icon-btn {
-   @apply inline-flex justify-center items-center gap-2 py-1 px-2  font-medium text-center text-secondary-900 rounded-lg border border-secondary-300 hover:bg-secondary-100 focus:ring-4 focus:ring-secondary-100 dark:text-white dark:border-secondary-700 dark:hover:bg-secondary-700 dark:focus:ring-secondary-800
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-secondary-300 px-2 py-1 text-center font-medium text-secondary-900 hover:bg-secondary-100 focus:ring-4 focus:ring-secondary-100 dark:border-secondary-700 dark:text-white dark:hover:bg-secondary-700 dark:focus:ring-secondary-800;
   }
   .secondary-btn {
-    @apply inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center  rounded-lg border border-secondary-300 hover:bg-secondary-100 focus:ring-4 focus:ring-secondary-100  dark:border-secondary-700 dark:hover:bg-secondary-700 dark:focus:ring-secondary-800 
+    @apply inline-flex items-center justify-center rounded-lg border border-secondary-300 px-5 py-3 text-center text-base font-medium hover:bg-secondary-100 focus:ring-4 focus:ring-secondary-100 dark:border-secondary-700 dark:hover:bg-secondary-700 dark:focus:ring-secondary-800 sm:ms-4;
   }
-  
+
   .spinner {
     width: 88px;
     height: 88px;
@@ -36,7 +42,7 @@
     border-color: #dbdcef #0000;
     animation: spinner-e04l1k 1s infinite linear;
   }
-  
+
   .spinner::before,
   .spinner::after {
     content: "";
@@ -45,29 +51,33 @@
     border: inherit;
     border-radius: 50%;
   }
-  
+
   .spinner::before {
     border-color: #474bff #0000;
     animation: inherit;
     animation-duration: 0.5s;
     animation-direction: reverse;
   }
-  
+
   .spinner::after {
     margin: 14px;
   }
-  
+
   @keyframes spinner-e04l1k {
     100% {
-       transform: rotate(1turn);
+      transform: rotate(1turn);
     }
   }
 }
 
 @layer utilities {
   .image-back {
-      background-color: transparent;
-opacity: 0.9;
-background: linear-gradient(135deg, #3d44de55 25%, transparent 25%) -7px 0/ 14px 14px, linear-gradient(225deg, #3d44de 25%, transparent 25%) -7px 0/ 14px 14px, linear-gradient(315deg, #3d44de55 25%, transparent 25%) 0px 0/ 14px 14px, linear-gradient(45deg, #3d44de 25%, transparent 25%) 0px 0/ 14px 14px;
+    background-color: transparent;
+    opacity: 0.9;
+    background:
+      linear-gradient(135deg, #3d44de55 25%, transparent 25%) -7px 0/ 14px 14px,
+      linear-gradient(225deg, #3d44de 25%, transparent 25%) -7px 0/ 14px 14px,
+      linear-gradient(315deg, #3d44de55 25%, transparent 25%) 0px 0/ 14px 14px,
+      linear-gradient(45deg, #3d44de 25%, transparent 25%) 0px 0/ 14px 14px;
   }
 }

@@ -9,13 +9,11 @@ import { notFound } from "next/navigation";
 
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const params = await props.params;
   const { id } = params;
   const post = await getPostById(id.toLowerCase());
   if (!post) notFound();
@@ -68,7 +66,8 @@ export async function generateMetadata(
   };
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const { id } = params;
   const post = await getPostById(id.toLowerCase());
   if (!post) notFound();

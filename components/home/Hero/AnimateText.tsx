@@ -3,12 +3,12 @@
 /**
  * Importing necessary modules from their respective packages.
  *
- * `motion` is a component from the framer-motion library used to create animations.
- * `useMotionValue` is a hook from the framer-motion library that creates a motion value.
- * `useTransform` is a hook from the framer-motion library to create a new motion value by transforming another.
- * `animate` is a function from the framer-motion library to animate a motion value.
+ * `motion` is a component from the motion/react library used to create animations.
+ * `useMotionValue` is a hook from the motion/react library that creates a motion value.
+ * `useTransform` is a hook from the motion/react library to create a new motion value by transforming another.
+ * `animate` is a function from the motion/react library to animate a motion value.
  */
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "motion/react";
 
 /**
  * Importing necessary hooks from React.

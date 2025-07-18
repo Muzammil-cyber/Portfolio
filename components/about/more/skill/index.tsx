@@ -1,7 +1,7 @@
 "use client";
 
 import { SkillType } from "@/type/types";
-import { useAnimate } from "framer-motion";
+import { useAnimate } from "motion/react";
 import { useState, useEffect } from "react";
 
 function useListAnimate(isHover: boolean) {
